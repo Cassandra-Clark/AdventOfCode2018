@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="26" />
+          <Fields>
+            <Field name="Cases" />
+            <Field name="UnitID" />
+          </Fields>
+          <Data>
+            <r>
+              <c>a</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>b</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>c</c>
+              <c>3</c>
+            </r>
+            <r>
+              <c>d</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>e</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>f</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>g</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>h</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>i</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>j</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>k</c>
+              <c>11</c>
+            </r>
+            <r>
+              <c>l</c>
+              <c>12</c>
+            </r>
+            <r>
+              <c>m</c>
+              <c>13</c>
+            </r>
+            <r>
+              <c>n</c>
+              <c>14</c>
+            </r>
+            <r>
+              <c>o</c>
+              <c>15</c>
+            </r>
+            <r>
+              <c>p</c>
+              <c>16</c>
+            </r>
+            <r>
+              <c>q</c>
+              <c>17</c>
+            </r>
+            <r>
+              <c>r</c>
+              <c>18</c>
+            </r>
+            <r>
+              <c>s</c>
+              <c>19</c>
+            </r>
+            <r>
+              <c>t</c>
+              <c>20</c>
+            </r>
+            <r>
+              <c>u</c>
+              <c>21</c>
+            </r>
+            <r>
+              <c>v</c>
+              <c>22</c>
+            </r>
+            <r>
+              <c>w</c>
+              <c>23</c>
+            </r>
+            <r>
+              <c>x</c>
+              <c>24</c>
+            </r>
+            <r>
+              <c>y</c>
+              <c>25</c>
+            </r>
+            <r>
+              <c>z</c>
+              <c>26</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Cases" size="1" source="TextInput:" type="String" />
+            <Field name="UnitID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings>
+        <Position x="690" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output22">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Iteration">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="AdventOfCodeD5.yxmc" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="246" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="UnitID" action="Max" rename="Max_UnitID" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Max_UnitID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="606" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Max_UnitID] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Max_UnitID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-05 01:21:20</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2018-12-05 01:21:20</StartDate>
+              <EndDate>2018-12-05 01:21:20</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Max_UnitID] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+            <Field name="Max_UnitID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+            <Field name="Max_UnitID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="222" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[UnitID] = [Engine.IterationNumber]+1</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>UnitID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-05 01:21:58</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2018-12-05 01:21:58</StartDate>
+              <EndDate>2018-12-05 01:21:58</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[UnitID] = [Engine.IterationNumber]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Cases" size="1" source="TextInput:" type="String" />
+            <Field name="UnitID" source="TextInput:" type="Byte" />
+            <Field name="Replacement" size="1073741823" source="Formula: ''" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Cases" size="1" source="TextInput:" type="String" />
+            <Field name="UnitID" source="TextInput:" type="Byte" />
+            <Field name="Replacement" size="1073741823" source="Formula: ''" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input20</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Sequence" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>CXxRrcWhHoOwWtTwSsRApPWwarlYyFWHhJjJjbBTsSQqtBTtbTtwfoEeivVTtIOLwftTFQqWlaFfAGgoOMmQqyYwWWDdwyYnNBNnGgBbwWbiIZAappFjJfPYypPPzTtWwrYyRBuUbjUuJlLKhbBdDAaHkNnKZzKuUkzOoSXxnNsZtTfFIiUuHhkrRvNbBgGneAaEsCcSYyDOodVAanzOoZNJKkpPoOjXaRrAmMfFDaAdtTOfBbFAaFaobBOIiAFfUulLWwlLoOEBbRfyGgYNnFPOopgGhHLllLfBbjJFBbreifIijJEeXxLlpPUTtuLEeeyYVvEpvVHhPPNOotTnoOLlLIiGtTNnTtgQqlzZpPpzoOlVvLvNnVvHhVjJBbvVZmkDdIpAaPXxixgGXLGgNnUuAWwaldVvDVvIiaAnTtNFyYfKZzrIyYiYyRoOdkKwWfFjJCPpcIiDAaSseeEOHhFfiIoEFvVNnYyFwWfZYysSzSsqEcCeCBbcQXxJjfOJjlLSsofwWyYENnEUueekKiyGgzZYIBbUuEeFoBbOqLrWwRlVWhHwvQfKZzCHhcfFGfFgyYWwkWwbBWOVvAaoQpPqwKkbgPprdDRQqrRUfFuGmvHiIhsSXxBVNnDdvFfQqbLdDloOsSpPPpBbUuwXxvtTXhHxVhHWHeEhdNnJhHjDiIYyOoxJjXjCcLlvRSsCcrVEpPqQeJZzGAagsrRxEerQUuqRPpprRQqPArZzrRRadDBbtzlLkKVvFfdDnNiIZzdDdDdpPeEDdZzhPUuyYpxXHpoOPRrmMUpPOouaKkAhAaYdDySRrJjsHFgGnlGgLaJjAqzZkKJjdDQbalxXLANnBhHbBGgAaiYyIIisSNOomMHhLDdcClIiwWfJjzyYZbuUCcAjJaoOmMLlMmQqmMuwZzvVBbMeEmCcWUpPgiOomMIlMnNmLdDPprRiIGSsPpBvfFRrtTVVvdDEIiTaAtoOKkHMmgGpPhcyYCdDUuOeLlEDhHdoelLOoKkDdwWCkKcDeUxXwWiIWfFwTtNSaOoAsnuEXmMJqQucCUjJTtjxYybBhvVHTZMmztCMmcsSTkMGgmDfFgGdkKWwTtKKpwaAcCdDbBySUusYfJjdDFopPOnNvtTVWPpwWpPVvRrrRViIvaApOsSoyJjmIiMQqYQpPqoOPgGkKmMPUuQqrREerRBxXOokzZVvcNnPpCRrWTtCcpPnNXxdsSzZeEIiDCcJwJjWQxSMmsXqjwSsbZzdPpDEJjeKkmMRrorRXwHhWxLYylOCmMoOcRrhwWzZCjJcLlQqiRrIZzxXHBfBbzyYZFfFilMmlaAPVviIpTtXdDxzZfwWFyQqYsWgGwXAaxyYVvzZkyEeYAaKJjEJZKkztTgjLqQlJfrRCcWwVvvjJufFOoUBpPYyXxbVcCvQqBmMLlPxXeEpzZzZMHhVvNIhHiASsaYyEeZzhHkKsUPpuYUuQTtqQqmMmMySmSszZPpoOLrvVxXRlIipSsbMmqfFQBPCqQWZziIwBbLlqQZUbBuKkzgJjgGGUucESsFfPpgGTzZZzVJvVjvvVfFtJjdDYHhyhHyrRkKSKwWuUkskkKRrTtGgpPaZzpPkKUuMmyYlLAbyYRrHhBKSWwsjJktTWwgghHGyYLlRGgrMmbBQSVvsqGRrUucCxklLKXTDdmMtJUujsVBbUuzZoGgOZzpPNKklLnjWwMmcZzmMCJWyYweEXuqQUUuxgGioOOoIxYyXxzZXvUuVkIiiIrzZRFfGHhgQqUuKvjzNRrnSQqseEoLluUdsSDEesvkKVSOZIoORrxXlzZpPaRrdDAIiAaYyCNFfCcnIipPVvmMzvVZAaKkozZpPnNcwGgWCiINnOkRrKQqUuqAaCcQyYtuULKvVKkcCklXxhHbBToOcLuUVAWwazuUmMAgGaZuiIUGRrgeBbEnxXLlcCSsNAakeElLKfFcCvzzNnZZnNrRCyDdhHYrREbBNZznNneESsgGVjJrSHVgGvhKkFfsRWwDdvgGtTeRgGriIyYnjpOoPCMZzmcJCYfMkKmFyDdJjMkKIixkKBbXUuwWtTeEMmdDwWtTrRXGgAanNGgxGqQgDaAdjWjJwJmBbmMcCNUuuTVvtULCcCcLiVsSvTtIxXuCcUlmMJjlUuYspPWwkKUupEePQqzvVZSIqQiIiiPiIpoOevVEIFfOxGZzgmPpMbWLlAaQqDdZDdoOFezZEjXxGgJLgGloOSaAYyWnNJoGgOuUwWjNnwMgGCcCcKkpPGnNgroiqQIORLlqQqQAaKklLfFWqQVLNpPjFfJqQUDyYdunKRrWTtEepruUaCcARPwwWkPoONnpSdhlLHDQqsLliQqPpUbBuwNAaoOnZZzcCXHhvVxbBrRziCRrcjJxIiQdDVvKkqTeEMmELlYsSyUuwWesSXxnNHhlPOoQqpQyYsSyYEQMWmMwmZyYgoOGwWugCcTtxXGfFNJjvVnUfFeEBbcGnNyYgCVvnNAuUahHpPMmWhTtHNvJjVDdndgGjJkaWwALlKiITtDRrbKkRIidDHhLlQqoOHiIKkeEhKDdrRkiIrRMmrCcwaAWDmGgMYyCoOcIpwWPiWwQiIqwWdtGgJjTAaQqlTmMtWwLxXAaixXZzIBbbBBzOsxXSLloBbzRrZnNyZBbzXxYAawBhJjHbjJWwDdWaAjJZuUPPtxXTppJjqNnQXxcDdCNSsnZCczFfwzdDrEeBLlbyCcYyabBAYleCclLuaAfFDYNnPpqgGTtQNnyLcdDCkKoOzAaZmpPSsIiMDdcjJCdDKeEkZzWwjvkKdCccCDuUKksrRGgzLlEerRiILlWwZSFfMmBfIiDdvCcWwhHVFJoOjdDJksSKjzZIilLmEFfezZMNbBVvVBbhRrHgGPpKkvmMkccCCGgDQqGKkoHhOiqQvVIgCqiIWwKkZbbBVvBzlLoOQqwDRrGgdmnNZroOoOiIQqBbqtThoKkQnWwfFfPplLVvIiPpDdLuUGglxXmaAMrRjxXJNnrEedDRFvoITtiOYyWZzuUETtRrAiIaAaoNwcCAQHheEEdjJDtlLTvYQqGgyVIlLAHhbBaiWWZzRrzZiIwfDiGgIdFEecCOofFTtIiXxfdDFRoOrxXUnbBmMJfEepfMmBbFKkacCaaAAZzAhHiIztTHhYyfJjuUYimhHYyMJjIfYjJylLPcCpQqYNnyxXFeEQqacCAVKkWWwhHLyYCcZzXxlCcyhHYVvJGgkDdxXtTKpPrRIiLlUuLGZvVwAaWzgkJjKSlLseElbBrRZZkKzEebBzsSqjPpJLaAlrFfrtTRmcCSsSLltoeEbBOYypPMmTFfkgORroSsGaHhASGOouUgxTtRXxrBbVOohHvQqXoOsZzuUIWwIZziXxsSQqwWirRKjJhsSHZznNYuUMYymaAJjnqRrhHwLEelbBkKWhnNJjFfmMwWtqQTTkaVvAyCJjcYKtbPpBGgCcwWOoNQqqEeQKkeECtTOvVoRrcCcNSsnxuRrRryYUjJuRrQqvVUXyAaDdQqhHWBEebYHeEfFhybYypPBwQHhqWxPpIOoYjgGzZPpiTFHhMwWmfGgWwJjzZgJjGbBjlugqQGULtTJJjtMxXjvrRrRVdkKSHBbhVvarXxRAsFfEeIiZBblLjrRJrReEzQJEFfePhYyHpVvsVSsjJLbBKWwkTtEXCcukgwWUuGRrKTtFphHPQTtXxlLqxiIHhFfXoOxdDyhwWhHPWLVmGgwWMUucCvVaAzZPsSNnnNpvbiIBOofFMmQAaAPzEeZmcCMIFfpPJjGgoOwtTWiOoqQodDZznrRgZzhzZHSsEeydnNxCcOopPjJdLlNdFfDwWMmgGnqQDrIiIZziRxPYyFfplLGgzRliIaQccCufFUCqANnSmMstTLvVsCcmMSZUuzkKrTtAeERMZzPpmzZxXVvDdCcqQkbxXRrFkiEoOQoOnNSlLvVshnNKmhDdHeEmSsMGgraAeLBbqQEelMmERtTGmMNngqQxcCXGdDjJgMTtmGtTPKkpYOonhHNhHHRrCczZfFVRrRrvjXxTtJcChTtaAqQVvnNnhwNXsScytTYwWjJMmCsSBbgGcCiIuUVjZzJOGgolVvJjylLYLCrRjLlLlJqQScCsEmCcMUuQnNqIbBJjigGAcChHdDZzHhYgBbjJFfyYZZGgyYzzfFusSUhcFfCMpPVvmMHhmweEseEScCoOTaABbCfFIYvVyrRkKRXZzxdDMmInqQHZzfQqRrFhDdAaaAyYFfLlKfMmFuGgUkmMNkKiYWiIwMsSqQjJmyHqjJQhdcCQziILTZztlWyYwZKrRgGZlLzfFkayPpShHcCsrRAuUbBNnPppPoOorIiROaAVoUNnbcCBIicCQqDdeEEkrtTRxTtXKeXxEEeeKrRfFYylJjXpPkekKEKxLeCaGgAwWDlLdeEfFFfcxXCKOFfWwlLoThHtnKmMkNydQqByYfYyFbnJLDdljcnNpNnpwWPAaFNnfPPpaNUSFRrRrfrJjNnRsTCcZzWrYIiyRwuhHQCfFWwceEyYxXLrRCcQMmzZHhCczeyYeEfeExhHXFmAHhaMHhEXxRrpPdKkwWjNndDnPpNqwWTtxdHhDXUqQVHhvurRUujJgRrxyPxXpYXZawfFIGeEMbBcCmcCgcCRrMmODzZzhsKYlLyrRDCWwcaRroOASIiQfFqoOBeEkKbKQqkcxXnZkHhUAPpqQgGGRZfFzraAWwKXNnxyYjNNrRbBnZJjzZZzzUsSuYyJjJYyJjjIGgiwcKkPsShHNsXxIiSnAasSvVBbhPwWpplIiTtLRfPpFwtTJGzZmMXEhHexgwaADdWJxXjjJjrRrsBbSOgGoOouUvVRYptTPAJjGgapPHNnhUuILMSsKkYyxGgdDriIRXjOCcoJjqQQMmKpPaAKnNyYptTPPDsSsSJkKDdUuSnyYhHJjNWwBGgsOoSzFfFrRfZbZzdDfLiIakBboOXxonNxXOnNYybBYKkdDtTyNnkJjVpPgGhfbBFOLlZzzZoExXeOnXgGxAODdonNpeEPadDNiKvwtTWocCjiIcCJmMTQcCqhMmKksSHtKvVBbMmkfFxXKGgzXxYyCYknldDOoLwYQqDdwCcQqWyWNrRoOzcCJjmMcCMmOoZKmMfoOLlsSNiyYqnhHNnjIiJoLxXYqSsbBQxXkKLlcBbqdeWwfFEwKkvVEBbeWwtTxXGgWDeEpgrRGyYPlqQshHnsVvwWUuSNAyYaAuUqQWwfFyYJjCclQqtThHLIiyYyoOYasvVlgGvVpPLSntKkTJqQsSqQreERXnNxlLlYyOoLuNcCivVInIivVTTLlttUfFrLlajJpPhHAwWQqRjhHCcOxCcFfLlXoRBbBblLVxXQqOovjJrzCcmMdLrYzZkKJuUCclLsSmMbPpmMhubBnNGgUFfHYyknNKQqDRrdQSsDMWHhwmwWMEKketTDcCSsoOdqQABiJiXxTCHRrhHTtnNYyAaPpBAMmBxXXxiIfFYybyYYLjqQjJbnNkKaABTtLluULIimCcEegDvVoihHrRPpvnNVNncLqSNnCcSsatcCTtyYpPlWwLtDdRJjrjJwWTuUHSsNrWwNnTtfmMFRRHhjJqQEeUqQutjJTveceEBbhAaWwljJWwjJAaUyYufFdDJjNntTLhcCwuUWJRsSXBbtgGTiIxnOoeEuUfFNnNxtTnaAaMmITUutMmaAaWwAWrRHdXxDhwULxXeOoUuEdhHmMlLlLmXIimMxLldDneENVrUuRVouUJSsXxjbBlLYybgYyqQsSsvVBnNIjJibxgcCdahHhHADSsYQqyrDdMCmQqMsfFStTxXpPOGgozcCaKnNkAYtqYFfyGkKsSXxZzSPpYVvoOKoFfvEwWeCcJVtiSsITROorWwkKOmAaFHmgGvmMpPVQHhqxhHXbJjBFfpnNVshAaAhzZLlyYjJeSsEETBbtllLIPpBbiLsSPXqQOobbCoOcBnNBKEpPeyiuUrOidDYySsKkBbwWNDdnpPTBbtbQqaQqAqXxyNnzZJjMXgGfFxUuVvyYorRbBOEeuOUuoqDdQRrjkKJJUuFfPpCREOTnNEepcXxCzTtjJxXcKkCdDxXkSsIirRKfFkKZgQqIiIiqQKkRrWwgGukSFfiIcCsZzKNfFLxOoUutTwWMGpPBbtTeEKuUkSsSgMlLkKmwlLWGAuzZRrcCUukKkKYyHEeyYNnRrFUuWiBbyJsSyFfBbOrYKTtkSsyJjNVvnLYQAdDpPaDZqQLlKkuUPpiwWIvVIVCfFcvRriwWYypPXSsJjxJheExXyHhHhWJjwMpPRrLVviIlRrOoAaqQNHhGgGLlgPpjgGJORDdwWrLqQHhliaZpPhqQYXZzxyjkKcCJHjSsTtJzAKkZGgzgGOoWQSsvrRVSnNnNsIiuUqAawXxNnsIQqswWSiyrRYYGwWhHNLlrJtTjPiqqQQZDdaASsaAHhYyeEzIVzYgDwWdmMGAKpPkxXammuPpJjpPPpWXxwQdDAprUuRCcoOFwWfPwmCSsbsSKnNkBRuXxUvjLlKkcCPpNnJVLZzkKljJPeIiEHjJsSgQqgGGhXJjXZEezxQqtnNTXzZYyVvxkucCUpzYsgGSDzZdWwgGRFfFfvVnNOvxXVQrXNnaAqQZnTaCcAtbBJlLTtjpPUuNGgCczkrRRAKDdmXMgPoOFyknrRNowfFWwYyaTZztaAAlQiIqTbBbBYyQqmYyMmMPptDdnDdAaOhBsSyYbBbZAFXxRgoZzcgrRGSsCBgGCHhcZvCcBbnNIZzMmLliUjJuzZVvsSVmMsSnNzZbBCcVvZzzwmSqQFfXxsSjJBbFfFfdYrRyBbDlLdPQqpIiLlNUzLQqlLlZMKkmlLuJAalLZzeEjiICcDdnPpOKkosSdzZDQqxjJYyZzVvgrPgGsSpghHOFfkKFfPpobzZBGvWwvvUPpurRkFZhHpQqSnNrRUfFLqAuUNnVeEvxXmMqjtZzTbBJKOlLYacCAMmuaAKkeEnvhBbHVvzsSZMjJmIieEXxVkjJKEGgpPIEeHSIFfiHhdDIsSrRUlLdzyYZDYyuiaAijAGHhgPpfDEesSBLlbpsSPdEyYrRBTtRrvOXxEewWnMmNYyocClyFfYHtThLCcDmxXMdDdlLYyDwWuIgGidbBDLlULgeGgEYylchHfFyZzlLlHhIqdDuUOoQiqQHhhHhHgGniIsfFSONnnNofFkKNbBnmMrRNsRgGDuNnNnUOohWcYpmMoRrOPIRfmMFxIizZbBwWXPpeiIUQiInNqtBbCvVVvzZctYyejJECayYyYAsiEestTJjCcAaAvkOoKkKESsiGgIgEtmMfXsaAyYSxFcjvWwHPpMmBbiIKKnNBqwQqWQVvuUfFfQqFbwWkKkAcCaWQqJXxjoOwiIkaYyAQqbsoOSrcCRBlLEfFbeExvVXEfFIiDSsVniINnlGgLQqyYHYyFfhPpNaAnNzhHuUnOVYyvVvoeHhERIijiIJrZXmOoWwPEepmoEeTtgGfFcNnrRCUuOMCbKGzZgkujgGEeJBbVvRSsBNFjeujJVvBJLljaKkAZKkzbiwCIicWIAaKDdkwWkKxXQqpYyPTtbBgZmPpRzXxRLhHelLEwWlAMmaBuUsSMmXRrSsJjTtbBIisVryYNnLlXIrMmQqHnNxkKYyyYjJELFGgnRrNsAaRrghCcHWMmQqMGgmhHPpvKmMuUcCcCczZNtDYqQydpLWRrCbBuPpfcCWtTwWbxXBwcCaAWwIigQMlLacPpXQqxyHnNEeaAkKYybBFfrRUYjJhJjHVfBbFOovBfiIFtMaTtAAjVvPpJatTmxXKWwCfFeDdULEpuUPXxvVcrRzzLkYyKlXlyYLOlLoiFYQqyZLBrRbTdLlDTtJjtSsFyYNnuUfhsSXfeEdDFYeEKkhdDHyxCIiLoaOoAWwBbYuLlWrRYYmMKkSswsSWALlDhHLlYydaoOctkKWwvBAabSsVRiIQqrvVgbsSdEPpVZmMzTtwWLllFfvVLveDHQqlLXxhvVgtTNbPprLqNGgFcCGgXQUuqJNnwHhWaAzLHhifFaHhBbhkKHfFOHIrRgGRCcvVrReHhgzZGmSOIiobNnMmWwYyaAuBbUlnqDdbBWwlMtDdPBbpTnNyAatTAamAKkByYyYGgEUemMHhbZzBEwWJjxIUuiOLLlloDeEmqQFsSJTkRrrRKbBtILlRfFrpPhHZVvzqQmCcTVHhgxXROoKHheEkmlAaqtTpPAfpPWwFadDQKkeERtiIKkkNnEiIeKcCCcaHhRKRrkEBzcZDhegGMlLJXxHalLmGBbsSShjjrRJJdIiDiIAaYyHYySsOaAvgqQpcCnOoYyHhcsSClvVLNuUnYyzZVgGvNGJjYhHKkSTZzjJpfcCenNenSsmwLlrRWMfhSghHKMmJjTtUuWwkGpPsouUOBbnWfFwqQNiIPpJaEetTDdAGgLLWSicRrsSuGduBTtPPpiIpGCueEyYbBnNwWbBWwrVvRxuzZnLljJgGDvFPsScZZzeQqEpaAPRUuDdLOOonNoIRQqrHyYaAYyDdGgxSspXCcxywIWwivVcCKpAauWvWrnzZnNqQNNDMmRrDdwWdaAnVxXvRELlEWcCiIQqXMmFfxwSYysFfFjOoFfELluUPpemMJSsfHXYyqQGMWwmgGgGgaBAaJjMmbwkdDcCvVeDdAarRVXxvEKWYygGsSoqQOLxXxXeELlCcnCTtJjrRvkKpUfFBiyYPpbBIrmoOopPfFOtmMXcHrRaAhCihBbmuXQHhqmMeEGgfFFQPpJjaAQbBqUtTZSfFJbBjJjswkKWFqQCcLlfBQqfFAaTDdypPrRYjDlLdJtlqQLdDulLUVvrRkAaRrwRxPdDsPbBdSsCVZzFjJFfxmVvMyYAqYyYRIoWEYAayYlwWLDdyewPpJjsSQqCctTPmUuYynNGjAlLaOHwTZzFfDdtSskaAgTtGRrDDFfcCduUSsgPmMPpVvpPtQqTQqIisOJjrROXfkaAjxXUJjumPJjptlLTnAaUuNMJkKlSsLcfcCjJyYgGPpRGgrUMmDdndkKuVFIifPrYyMmRGzZdDGggXZzxtTXxKjJkkFDJWpPwjdDdGgYyWNcUhdDDdxbJjLmMpPnNiIOeElLLlrRIEedvnCSsoOAGZEezKqORZzfFQvVqUzdZRzZrAaXxApgEeXxVpPafFpPKmMEbBcirRNnIFfmUuazSZelLlLnNkgGKEovVSpGDdgmUuMJjdRrbBJjDPmMmMvQqVfEvVeaAyYXxsSFMmYylFfgSdDbBstiITeMwWWyElLeOowWkKiIvvgMoQYyqOEgkzZVvWGgFfCcDNIincCZMQiHhIqSsCbdYyDwYyrRyYWUuBPpFVcCvfIipPCceBbxXzGgBboRfFKkrLheJjjcLUVvumMjJEtTeBIiWvVVjHhNnCDLldsJEArRaejVvxKNnknPcTtCpmMkgHSshGfFojuUJRrONnLSslFfeEFcjJCPQqSspdxXDvVRfFlLmKkMAVvuxSALlTtYyLlLFflIQqiaSsRLlrdDtrRGgGBbgYJjyxTtXHZzPphjJBbYyIipRGgQjJcLlpPhIiVvXxFCcfpqSQzNnfoOWwFTtZUugTtyAaxMuDdqzAHybBpguUsSeoONJjiInIAyomMxcqXxXYMmJhHCcXxXxcCESseHviIpLlvLZzlZzVsSbsSxXHhZVzZzZJRRTSCdANTtfFiJBXadDsSuJsZzSiIjlsOocCvVZzOWQqwoEeLlLlJXxfGlLhHgBbFbwWSZOGBbgozsJjaAkNjaLlXxFfAmhHiyYqsSsSQvjFfuUgGUSmMMhTruUlLgGBnUusTtVaKGiUDdbjJBuVqrRtYyNnTYtAAatTyumMUkWwGKkgIMmgGKCckbBjXxGCsbBHgGhfKTKktDTtJGgjWwDdWoZGgzXMmxOnNwwWqRrjzmJnNGgjqCccXxRPpAaaAyllLYYyyLYnZzlLsSNAaSVWwCcNKSjJWwjJBPpbPNntoYyOYyWZzNnAaqcxLlpNHhPiLEFfLcClQqHqQTNgKkGriItTwWYyuUleELAjJGgUuXAaudRUhHurJCcSseEjxXVNiGZzOoWPiIpBbiBbUuIDLZzCcxMmQHhdDbSqzZUulLuUTtiIIiPMBVvbHuFoONnyHhYDdUuOMmaAZvVjJVvCxXxXPpgNnGwhHWisSdDOtTIidDmIiWwejTtJESsMyYzmZsSppBbSsPPlLAaAaDTIKksntTNHhcCyYTjYtTvhHcCFfMmePpEFoOfrRvXTKktvRaxuUXqbBQoWeEwpRrQqPXHBjJtTGXzXxvVvVcCZBbpPdDSsRrGJjIYlLyOoEjJeaTtlLWwAbWBMpKzIiZZFTtUfoOFLuoODvEBbraARebpdDAyYaVJAVvSsTeCcEFftHhFpPZTtzUrRcAgGnBNhEeDdcCmMLzHWwsSUuhSsWwRrZjfFtFobzHMmAkGaYyPpbBIiogCMmcGyYJQbBqMmJjBCcbjjvVKkSwWYupbBVLlpnyVwgGfogGOZzSqSsxtMXxAaiItTtTgGACcaBYypPbZrSsPMmkrDdQqRKsSxhHVvUuXfFUuUucyYmXxrxXKlOcBOLamMOEetTJpPjBbcwWEeYyiIGgCksSrRKmHcChMVwWvcQqmKkMjJCWEOomMLlvVTMmtPpAoOwIiWyhHKASdDkKsmMaFfgHhjJHhBGgOolVfnNSsckKCvVFBKkbacCAvaAcjJfJjFwIxXCAalLcimKkrdDKkrHhRkKTtSjJscqWwQoRAwWmWnNUPpTtRJjrJSYFVvfyGgbwbBvxnNSsaAkKgGVAavVzpPkIIiXxiTtKqjXxwWafxXaAFljAafFHGaxZzXJjGhrRuUqlHuUhQCwtVvfFJJlnNIiLeEIijZhTyYydDYTtRkKJjrjMwWWNkXOuYyRrUdJjDeTttDdgGNTthEtBwoONiHgGeaNnOPpuxrCQcZJoJjOoOjajJuUbZaAzUjMXfQSbKcyYDdcCdykKvVCuWBBPpsPpVunQGgqRdDjEYyFFfhQciISsCqHlLsSvVTtvVwWfHjsSSsLlJTtAGiIgfIKkkKxTtQDdqWkDDwbByixidCQqiJHhlzZUpOSsoPCcwWAmMmAayQqYGgsKVghlLslUPpuEeCcdSrRsGgIiHxXhDLcnPVvQuUuIiUCwWCKkfFccEepPeExXvUuKrSwWsRkMMdDbNnvBborBbkKOjJoNjJgzouDqQTthHCcduUUwWzZBeEbpiqQIPwHhWhwvtLlLlOqQyEOTtoetTOeGgQqETtiIoRrrRBTtCRnNnNrBOWpxXPmESEeVuMtQXZzqQRrQqHhxyYqTyYRrAmNnAjJwWXxPZtTsSiEeSlLbBFfgGoaAOsqTttqQVlLvkKmUuisSDJUujLldXFfxqbzZlpPLBAaBbrFRyYreklLKmMKagGAMmrRfrytnbzZBLoOlBKkpgsWwpPviAalLIVSsDtNyYnYeECcMmtTiIllyYwWEeLwuVvRiIrPpUPzuuUuUmJjJvVhUuysmJXxXxHUuhsSGEehuUTEeEeASsYyaeEGYaGBMmbFfgAIitTVUukKjJvEPpLlioOFfDdLsXYybBMeDURzZzKCckLmDdcCcCmMDdOWwzZoSlLoOBuUjJRrOoZcCztTEIieBLOkxDBgGwWRhDdHrHrRSgTtGEosSOeRrcWwCpPamMkqQqPpQaApvVNKdysnNvEWwkAaKekqYnNygGjvanNAVJANrRzZnhXfVRrOTkbBgnNGGnNwqeEQeEfcCNuOwWVVvvaOBKWwUukuUWYyRrZzwxXbuXVvxoOmMLlUBbfOoFolzZhHEAPQqtzwqxbBUmUwWuaEaNGuUNnBbbBgWwnAdisSIDuRZOomFfpwAaWeqSswWBgGyLxXcDdClMmoIiOXDfDdlBbvmjJMmMVXwWbiYYOLloOqOsSoiIKkDdQLrRIiKDAqQkKSaABbBoOPpHhpPlLbMhHmTQSsqZdjJDELeElispLlsSOZzopPBpHrNbHhBOoYEepALzZlENrRpeZzEoSsHcoIiMmYufNEedgJEXxeBKkEnNfFRrgGUuoOeHlpPdDLGAagkaAKsNpPnYyyMvToVvOFfQqGgDdcCMjJVXQqxTtNOcuUMpmMyQvVFfqdDYvVNnPsSJjaFfmMyjwWnqSVcBbHZCczsemMEtTpPuDdkDXxFPpLedPpgZzvJjAasSwVMrmMwTWwQHnNhQqTtqtRQqrJdbyYfNXxnPOLgOsUuIirsVvEeqbBIiVchrRvVkxXeQqKhDdHfFyTuKkgyYYKkXfRKkkbfFBXxXxySkKWwGklhYypPBbZWwhMmFfHPaFMYyVdDvXxpiEeIPKUuEenUuQzDFfZWkKOyYzZooiIQFwWfEexXDdntEeTNxCcAaAhHadDwWUuSszZwWhWwWGgGgUgVvylKjJafqOiIaAcSPpsuDhVKvVGdTaGgPpAtxBbXAacCPpuToOtAaORoKoCkvIiVKhFfpZQqzYOTBbtoOyYSLlsGDdgJjoxWwwRrWMyYPYYytdIiaVvszZKkmWwYygGMXjceEwdDWeEEesSvVCJHYDKkSNnuBIibpCcAlLasSAloOBJIidDlLqQlLFMXxmMYyfcIlyYxXYSlLskLjJKkhaNjJSYnNnuUNgYyGeEJjfaAUuhwkQhtKfuUlLSsWjYoOyJTQBbjJMcCFfJVYNRrnyAbFDdfwmMlrfZzFIQqqBGKkaAUuZLlznNEecCkJTtGgjJyPDAadqPpkKQATpYoOkKYtmMWwzZDmYIkKDAMwRftThHFhHrWmgQTcCKFfpPkYAayIiYwWmBHOdDsSbBUutJjbTfacUuCArRDCIiPSspcNngSXsZzSVBjGMmZPpaNVvGvgiIxXvGzqHmTtqQPGgFfdxKyAAaaYDibBzIMWwmWYywGgdDaiYyLlCkRdMmdDDtSsBGgkvVKauUSTrRrRwXwwNnWnNXxYRrGwYTBbBmMPZcCzogGjoOPFhcCuiIOviYyIvVcCRcJkKCcElUuMmZkKzZwpbBcYLlNtMwLtTlybBsNneBouUMmQiIZDdSsZzZflDVvdwWvugaAGpSVbBvSQMmqcydDYJuWZzDtAahHSsrrPpRwJjTtLlmoOEBbZzeAaMmFfqJjoEtUuGFfgTQBbojJOTtwqQeEYyDdjJFfMmEvwzhOoHOocqtpnNqQWwLoYwWghHGCcnOeEobBNyaQqpdDgoOGvtTVPpyBbNDdvVTtdzdDWwvVSenwsSoNnqQhHUsSuKkWOovVwOXUFdDOJVvIijFfMQxmMXzZvVqbSIfDdFiKkdSsDdJvVjeEDeLlJjExzZXfbjJvensWwSVKFsSiIfAaREQHhhBbIiHIJREaAGMTCctZxXzmQqvaaNYtniINTmYUhHOzNxXxXEFvCyYkaAKcVvNeEYLmRiIruRcXxCAdDTEXNPAWwGFfGZzgwfnaYmhYqRAzZsgrBbUXqxXbBgGLfGypPtTSqpPXxNnbSEezBShHbmwWKxqrxXxXqsHhShppqVvlLALlaQsSNniaAIyElLeejxQuCJaAjrRIiAbDdRxbPpBXJnNjIiEbNxOoXZznBhEejJbBHhfoHEXpnFRrlXMxrmEUXxIiFiIYybBbJjOxXbBolLJjJbBjoMXxWuUwmAaXxcCVvKIgrMoOFfemMWXgsbBVGVpzMIQwWRCcyYftptDNDwOzZQdhHifFyYiiIjJzBDavVAHAaUbBqrRtVnNvTQznOoNWUuwZqdDlfFLVhEmUWvVLgvMmfFyAMdGbsEVvqMiZzIdDSbBUJjueYyEjlLFasyYnNgGwWVvqQaASAEzQPpFfkLbmMBleEKglIqGguDiIdQqFfrxgxXVPpHltSsysSYXsMmUuubZzKfiIgGzZWrRAJpPKkAZzmnNwsSBuMKkahrRSLlEesrulLxXZzjorhHoOREtTiIQyaDRrRrlLdKeEzAxMHhTfFWLlcmrRDdKqOoaAQEekMAerRoJjZFfWwzXSsGgxrRozZGgspZiIzZWrmUBbuMRrkYyKTaASsrpPIidVGJbuUoOBhVJXoAaeEkKOiIkNGgtMmNbBnQKkKkoOrNnRqKSYPpdiLllvVLIqURrelqtJjwvvFfhHkaAxsmMDdOxtTXrRoSafFTcyYCSsJPLNnrayYqFzmATGgPMmpCcEcbuEhkKHepPvVFyyYYvHZzCJjWFBVrqQUHgGiIexBIibXfFBeEabaalyqsSEevVSsJjToAaOtudLJRQfkcdDFnNCpSkKsPZzcKvVpQqdSsDKkKklLKkBbXbBwWQxRKSskrTtmMSsmMHaAuTtUYylOjJKuUkolLRYIiyPpWtTyDOeoqZQUuWzZaUWxrEdwBLlbxCXnvegRSsrDMYyWwPfFkPiIpKGRQqrhOoHgSHhzrIiRRrMmIaLtTbmrxXZbLsPuUfUHlOYyfrkKhVSRmrrRTtRpPMoOOoruyuhYqQykjJqQQqoOKHriEDduDdSsEuAaSsOGgYqDHTtoEndWwDNtKkPpTeXqzZQoOoOqnZqQeEzlZzKkqfnVHPphAaEeDpPIvJrwvYyJjaSVumBbMdDIsTtCcfUuVvZzfFxXpPMmFPpzZMNnmSiYyxfjJaDdUueSsuUMlCcoCeiYyIEjJcdzZTHhtLmIiuXipPIuTtUIifLqJjzZkCKkckJjKNgGYyVvsSpPnhFttTrPlLJniFZzyzZespnAxvVGxqnrRNjJLRxqVveEEeTtxHhXzZvVEnuUNbGNnzYyhgcCGSpQhHRQZTtEUusqXxPpQaEyeEYeArRSwpEePWeJcCjynOoQLwqQWlqlLNEmbQtZzTIiIqtTgGKkqQqcCVvQNyYtThHnLiIWVvdDoMmTtOPHxXEYNrRnbPMmpNngRrGTtBstTngnbIUuAaDfFLAALlAaPxzarsCcSJfdxXWwCctDhZTtEezhOoLUJjtvfFktgsmMSEEVvqQeTVVTLlkKttRkKmzZBLliDpYyuUBbNbBPlBhHSSsapPbBAGgyeSdDYtTyDdgsBbbBYMNnmoOzZyTMmttKkjzwWZDXxLdxrRWcaAUuCSsHYyhVIiRMdDZzmJjYzZCckBKmMSkKHHyfvVDdvvVoQPpEajJVvGAxAaoOXqQaKaASVvAaQqQqsqQSzZAvVIiaaAJDdJxgGLASaozZWZKnNgSsPEVvXxZzHhRrTrRLlULlfMcCAGWcCdUyvdpPDVYuJjDwKkFuUDaAUkFuyYUbtTgZzMAaeSzjJKBbkEeboQqOoOJjBCPcXSUplOoNLDlkKLdrUSsfJjFdDbcNnlLIaBIxRPpCcrXpPpPUvVzPIRrbwWBPzqQobgGaAjgGQUuqCcQqJWHhwgGREekKrfsxMOOKWwAoOzZSsxKkOjJozuUZjWtmMTfThHhTxlJuUVvxPhHFfjJcJlrKkCzcJKeEeATtNjyYIivuygGYpZVTBGgbXmzaItTszZiIBwRrWwWZAhHIuGgrQlPpXxOojhHJcChbBjMOkQVUjJzOoxXvVkKDdVyvVXxcChLGgSeEsMmIiqKkwguxrRyhNYyWukMmXxHcnGgBbDdytgGeENPvsSBvsSVbqQtTAXEexyyYhxCcWVvuUtTObBoYPIWTQqmuUxXvBQqZLQqYFacCWrBHhbSsojJEevVlxFfXmMLOKkghnwWNDdWwSLiIbBAalLuMvVSrRiINcpPwWCTHdDhxucRGSCcsmoOMZzsWwdFJjWwKkwvVxyYOSsrXRgGrCcnmMUsWwsSyFOtOlLzZoFoOlLNPpwWrRrlzDYoOfEeJIfUemPPshHIiuUkAagkZzmMmdDSWwsxQOoaAqXujJYyhyYCKkFiIkKGgHhKvVAFfobwhRZzPprHWtmMMgGqGDLldgsSqGgQveEjCcTMIWOobjdDmmMQqMnkmGgMMmUuKSDdYkEelEekcBbCKEeSPdDQjJqpWZzCtXJFfNnPpJlLnWfvCFfOoHhkyYKnNSsZmMzciWNRrnqFpPwAaitqVHlcFQqfFaAGaAScDvkFfvVlUTtdkSTVRrtZzfxXbBFAUugUVvnNuyHrRdDhsQqSYiIutTUhHjBAahvVSQoVvOqlXxPDFfdoxmMyJvuSfFEeSXtKkTNnWwVydFfDjPixXPXxXrdDJjrRfFqQLlNnTfhRAaGgsLEDdjJeRtTruHoPpsGCVsSaCcAvcCwvpEPVvpeEnNOQqyzilLfYXxfiIFrRhHyyYjJIpKkehHEWdDTtSoOxXeEwWeAahHqJjQPcCyrRvVFfYcvVCrhHRbBLXdDJjxlpdaARLSszTtTtSGoRrOLlnUuNTEeDdtgsZWsMmYygjJcRrCAalCFGgfZpPXxDSBscCSVDXxFMmfdEQBbqemMvMfFEvORcQDJjwigGIWdqUulLCbhVvHBycHhCQeIiWwaAxGgFfXYxXMyhHxXlpBbcCcCltTWPLDzZeEdhsFmMRFfNPEehHoOsSqXCBfwwTtOopPkKcsSCkfFYynNLQepPPXbqTtGgfJsSjZUoRrViIqwWZhHzQVvJyYjpupPnYnNjJPTVDdWxAaQqXDdhHypAaNncCVPdDVvyYwWOcZzXHwWzhszLkKqNzZedvWaAfFDTtkLlEHheKTtdsSjRUXxMgdDaAuUNntBbGJjgJPYyiuXOJjdDomBKJaAUueWeWGgRrwmMNhHViCnbZgGPFfKPOoLlgqQzFCCWwOSsYrvJZzxKkGgKEeqQDdFHwWIihRoOrNjRrLIilQqLGglttzngGZhHzNRfVvkKJjSfSsxNnXNnvVWwFBbUuWnVtTOovGKcCkgNgCwIizxXWkKNokKUBcCFBbfbBTtcUvsSBxXICciZzzOYExmeEMmvrEegZzHwWWwxMOxSsKvDdVWwuUQbBqkXXxSsoKkmHhSsXAaplBlLTttTbIeEFjrRRuUbIswOffpcLjFLlGgSsfJEPprRDNBrgznAuCcqQUJjqEKcFfwDIKkirOaAvirRIWwViIiVrAaRyUuhHnNwdsXxlkKcGOXxoRCckKrLQGglgXxPKQNQqIizZxXnYwWyRkwEQqoddDzCcZGZzoOzgdDHhwJUMmWwZIOFfqEmMLlejZKknmvWvzuyYglXxLdKUpBbFhZIbaiIAarFfGmQVvnNBMaASskKdNnYThyYqQfuUZzsSBbxqTaWQsfNVvIvqCIdVnNyPoOaAFfpFdhmMEQlLNnzMmgxYLJjpsSPLYylaAYyCdtRxXsGgzqQEeZuUQBGnLlqQjoOuUNnhsSJjgNnlHJfKikKIAgHWwVvvVGQlVMhfAafxXvViTVvtCWzFfzZlZCcGUuviuqQZzeuoOUwtSsMmvvVwWVeKkETgCcGAwWElcCtTZjKXxJjdzZWwDOIiWkGXxdDBnbBNIdDFfGaAUDdvVEyYeuQwqcCCcQWLqwITzZoOXEewlLjJGSwPpdKkJubBCcCPBbBblDEeDdvVGemMmaKAakzphNEkOoihHkKJjLZpPMmkDdKmMZWnctUuNDdYynBbGxXgoODdLVveEWCajJAIGhRqQYOhddlJjfhHAPpqQaTtxoJjAaOiQqUSMajVvjNmFubHusmMSOaAgBTTXAFfYHHhhzenNELPpIiyUuYfvOoVhCVFlLeEcCeUunNjJbBmCCcqmMKNntYdDyXxwXwwpPCwWcJjOxXChHlEeLcoubBcipEgGiFPpjJfBbtqQNeSmMAgqQrNOPIqQiSTdqSsHhmXxMHQbBKkeEcCnvVNNibLlAaosTtStqGgwQCKyYIamOoCcKqQkMHhWrRwOowWIivjQbhdDnNHmNnGMSagmMiCcIJjVvhvuUUCcryYRqQuuUigGgAaGzZuUOoXlLxXxTNnxjJjyBOoCcEcCeRrxZzpcCgfCLlUucFGKrGXxkWOycsoCcAapPojyYuUbPpWQqxqOojJEdoORzFXxRrfjJsoOSfbVvVvMaCcpPKRrkJjoXxkKHvKXnNxkVjcCMrREmTtteivJjVDdbXHhDDdzZzlLZdYzZIiyTthovVOHpXxIuUkKzwWXYyxjJIIiOdEZhwubaMUaTtvIAXYHeNnEQqwWkhHKOMmaAMfFcCOaICkBZIiVvSAXkbWwLlbMWxmMDtfzVEILlmzZGrvkwHhPpDXTtybBYjJNnxsaAAeEaSIiplLPmHwWhmAXkKIyYPzGbBZzQqsSsSuVxxjJXbBsSDAaQHiuURrORcnNmpAaRIyeESYltTcCLZzlHhLFsSAalLfhYeEzcpywWJcjJYOoaZFfnyuUjJiIWBbqfOMIAaGqkKJMmdDhHcCjaYyxBaFxXfFxtgMmGnKkHXYqQPZZzzPwbBDEedawWaypNeWjJIiWIPpcAOoaCirPSsoyLNEciBWwbxHhrRdVLZKkaAzIJyyJjeEYRXxcCpzEeZfAavzZAVUuCKDdbTtBUGDdmWkhxvLSIMmiUnNuUSRDLlZzdrhEstxXwWSNnLlTtsXPBbpPpbxXHVqmsJjrudxXDxgMcTTfFPpUuvORruUiIkKIcKaASsiIflZzLgGXScDJjdCWOtgGTedDsBbdmMiIbhHNnvkPpKHVIRrPKkeEayYAsgGCcgGSolLjJPtyDOodsSRdkqCmydqTtLldWziuqlLIukOfIiFhHUwGgtuUWVcMgWwpPdqfRRrQqrAaRiIanpiIuUKupUnNyYKdYygMSoOsmEeOWTtJjwlROoywNxYZlLzKkCXYxeEedDEcCVTQqAdyvVVcqIPpIwWvuasuUSqrRvVupRiIkpTrTGMmpKZfFwWzjRraOmMJpvCcVUhHZzADPfFzZcCpsNHErfFmoOCygigyXxYYZuLaAZQftsStTTFfOoFkuTtpPZxSuBbnNnzdCgaaAJjArRNtDdDdjJFfQuYylLqrDnNdlIvVfJjdBbBPTRrvVmHUXcCxGgNRoEeQfFGIzfFMCcXxBAasgUuGjwWJOGjRFJPgGTiDAmGOouUgCFkjzZERSsptQDIidBbqiIKtwbJjPblnTtccciIodiIfFWlLDJtTPpUszHMLlpmoNnNPQqpVhTDOynNPpPpxSGHNnhvaDdlLwWAEzBYKAmMaeSsHhQTtqOoOypPydbBDAaqynfFNkKsPCcroSzpPSSssLSslsyYgXZzxZRRrdhfseRrEHxxXcTtWwClPYypzZLyOLxRaAVdTWwCctciVynumMrgZilCJjwWseEdDuHpPZoHiIhsaASoXSbBsxcCXpHVvhAebByYDdHhwljJPRrpIGgDdNJbBvJqkRRHhueEeEVoGWwJHYyVvgwPdDpngdDjJYyEaAeIJnaZzIiFsiFaKMmkcBaAKmBdDJqGgNWtRrxmilLSAEejAaJbOoIsSqdyyxXFfnHeEAQCBOgFWwfJjLHhrRZAESseGgHhKMAwDliWwtiIMmvVTfFwWILaxIznotTFJpabUeELloORJYVGEYnNGRCchHxXyRnurTjcCZzIYKHkUurvVtxXUHxsYUMmCclLBbfjisZyYXxwWImEiHAJnEpVRHoyEGJsSwMPHrRSBPpenLleEsSOhJoLlyVPpvdCiigbRrZSfFtTlYbBFTtuUfACcClnXxNVvVqQdGKkgOoDPeEXaLruUhHTFjwQqEetdDltpPDliRrRjJuuMjJqQbBCcmYVdYVvtIQqiUQaHZCczBwizZJqQKkJKkjmLiZzEeyYZRdDrMmxnViICcTtlLfBXuUZzHiINWhSmYyMuUTtbDdLDdlWaAwEwWejSsjWKHEehkOowJjAjScCsUsnmMdUuzZmMyXCWwCsAHmrYydrRDJHzHqQevmNsKkwWSsqQSnixWXDdUkJLaAUqiImMQudDwxpaAZHhrwWLlIihbeEGgZLNdEauXQqsSLnxXsjaeBnweEGzmeETSKkNhHyAaCctTjJYgkFyJTvUFfTtWUcnQQqfcxXeWGrAaNxmMQNknXYyGgsSVaDdXDJkbBeEkKiTusSVEsMmEwsiEyDTtdkFfiIgyYtYLlypOotDNnTlLtnuBbSsUUYlhHBbBRrfFJjqQukKbCcBMByYLjkMKZjKLXxlChMmHzgbBiGBbMvowHhLnPcCnPpNCciyYHUnNxXuhOojzuUBgzZDHVGSshHkKxCcWNAiIaDSrbJBbHhoTCcJnDsgStTEkDAteUuUuGmsSjJoWFIMmiAaeEfbLuUkKltTtxXwyXkKxYQFphxXtoVvOuqptONnPzMmfjwsSWDFajmMuQxGgeQnNqQZzJucPdNwWnDLlDksBbjJKnNCtTSRrOdDoRrJsThXQZcCcgUrbvNnjJVlhFvVfKkKflLFkvzUyYzUuLlMmglLmMCcgHtoOTDUFOBbDnoOksGgxZvTUytQcWwcRryYsXpMXqrmMgZlLqdDQxPpXgGHlQqMmCRsFxXMmRGAhrdDfWaAKHfoRrjYdNNBGgFfuHhEwqqfNIrRiOYssIivVkKSgjJfFhHhHWmMQYyKQJmBoiyEeZzJaDdjJLlDbpNnPDCiIvVBoONfPuYBGJjgYyiIbHhBbyUpFnicCcFgGtzCbQqGsSpTtUUkKbRrEvlXxIEIwWOTtoKuqgHhOQqaxXAVZnNipUuZzPDEedIKVgGYyOovStIiTqQsfdGgDPIiOOBpcCtTGstTJUuyeSsKEzZMmJjhHiVyQuUquZJjzWwoOSfxXFmrRnNaAIivTqNStToOsTdrRCjJcbuUFfBkBpDdeEBlLLQqtmMTEWrLlnNwWRdDWPxuUCKslxXrHHTtIihhRZzSstTZsSumMURrgLkJayoOiIoUJtkKTDdjQqmMzOqrTiIvNMmXBbxbBWnSAaLJlLUHhyGNLQiFpJgGGdDstNDBbxsxXSsSgGXdEtsUuSfFtTTwWeMMmXTUoOHhAaJftTFfFaAgGPfvVjJNfGhxvtnxXBmMIsSiroONnEegZhYuwpPWUSskUtaVxXSsLliIhIAaKkGnNtXxAwkKWGMmUrVvlUVvGwWefddDYyvvWuoaAiIPxXyYTtpBGzcXxNaAoARnNUNnYXNHhFffYDakKrUKkuTTfjXTyEeLQqNspUyYxDpPHMOPpKvpkKPmtTvmgnmnNOtEYyHBzZTmnvVGQIiAzZaqxXIEuEZlLzuDMmEMTmLwNnwWxgBbOPcCAwWyGgYtTMrRmOIuUxPnkKNpqQXLliwMmWjJoITfFRrvVSPJjNbmWwisSIdDmoIiVswWYCSsxXippdehtsjPjVvJYZIizGgyjgvKuKzZeEtTGgbfPTwkzZNNRrnvhtTlrRJXxVEzGdhhJjEZzisQLjlLJDhiIaJhXLlbBxHBnNbQXPprsaAhMmEecCOGrXEtiIfeGgqQEFTQqjEuUDdtvVeEBblLKkbsERyBjJnNaSvgGGKdDfhxsSXLrseUuMSZzZzsmULluWXxnJMeUuEIyYiOYyobJEejESKIrKcCAWwaUuZpIhvFnNoOfTAYyGBbWwGgVTkbBNBHmMDLljSsiIZfFzXYVvjLlPjtNnoOCLhHljPNnildTfFBbuLvbBSQsXSdDsswWOAkKYnNnOoLwWlHhMDMmcVCeEEYjovcHxkdzZulLQyYeEqGydPNefxaAzntGgbBBQAQXvrqQqeRzACeVvEcZpAKptJFfjWfFDEqUumMRxUupnDfpRriIXdsSKMmETQxpMmbBirRXqFoOtTbBnNRbBxXaKrUHVKMdrGgOVWwvNnoqQhZdyaEYlnQqkKkGWwTbBxXtjJyBlZwuUWKYGXxfpEaAvVsvJjVvVyWGgLMmkgYnNyrZNUunZFgivJLlgbPdMmsArmzkjJPjEeOyEHNMmYyLPWDdwpgGULtEBTtDdDyqJqQaWxXUBDWGHnMAJvjIaAinzPOJMouOjVJQXBOodVDFxjKkSVuUwGyKhPRPpaCcRHmMqXDDGNyoPpqQOhUuPpHVYAvWwVajCmocKkwWtwUZlLHhQltwWlLjJgXBpRrPmxhfbJuIppPqtTRaWwTYyCgXGQfFxXqxSEgZzAYsBlWwzZguSmtTtdPMKwWkZzoOoXxOvPpVMmMhHqrsbCcBlHhJayYAIijyBbsSXwuVTHhmrzdDZRxMmTtdbOohpNMQRjDdvedDJQQgGKhaAnGRfiAafpdDDselLENnTIiNUunTTtAruPpAaNDcCYfhGgeEKHDdNnhYXxyoDFyYlLFQKMefkjJmKmMkzVnNfFTNzxXZnHSZjJjIHXUuQOrlfViiWSzrRchsLZtTzOoSzQkHySqQTtsYaLlUWbQuUqyznDdZzNDsSdgBBbiUbBTtuUbBbBJCsnNjCwWcvVsipPYsLBdDbVvatTPrHhOfFAmeQzZAaabwJjAIIEoOXULCGTvCcbdeGgMvAAkuJjJkaApstLgHEegmMIGwCKfdCcVPrBEenkdDnNmFfeYEWjaAJxWwWvVYyzGseLrgGlESgZruSsjJHhzZMNnXYySsoOdhHLlPRrJABcCzLJIQqCcikKkKHdnAXxXxaNxjJXDyYHbVtHBbYzZXxzZTBbAcAaCaJZEemtTMEeAaoqoQemkjJOdTdDtDlOypntQiOSqQsoWwkLlyYmZxNuUXaefFTtNUupEyYpuBbgGMmebBElLUglmMQNnYLYJyYZJjDYqQyYycAuWQypVTlzQaADKkuhoOhHLlDrRdbmpPUulPGNMmbBjeETDdiMmIWsFRrpIWTXwpPWhotYsSCcgvLSwsjeJjSwoDAaWwAsrElmtNaPWbBPPRUuUCgnXDrRwAaEIBbzspUkKkcPyRrZzaWNHhDdGWwWwpJjKOpkoRYmMtHdkfjrtTCKOSTdgGVVWYrRdvWyxkMmVvlfGgNnLaXxKWynAMLMmjMqkjJmUyYozJjmRwymMDcZmgYEMRhHbBruCvkTWxXrbNnBJjDChJjFSsMmuUoOwMmVTFXfQdGsixTtRdDOOAaVvNJXLlAQqpNkKBbIFDdMUBkkmIiMKZAazHPBMAcCaqzSszZGeEUuAMNnaaPJJZVVvbKcVlXyQQRHMguLlUKafFAVkUwolHCVhEMbygmdDCcbtuRmZyxXYjyMqQYyBoTGlLMtFzKzTPpsuxXfxakZQqGJWeKLYyuxDxXdLnICukKUcVmMwkjzZRUboPpvVFfZhHpmMkKpPRsNqlLcCSsQVLlZzIrmqQDYvVeEuTomMOXXxUyYoOyjJjJtnNLGMoQjwDdlVdKSSCcfeEOhQqRsEApdMtkqXQDLMxZSVinNjUiIuJqQHPpiPcCpIzZUWmMFxYWnwWDLfZOoBbSVEEeMnHhHcfFCMmZzKQixvVSVgAiVFTnLnNwhcnRrcOoiAboOaAbBoltTCYycAaCOMgGiImocVvJjFyoONWtTRoOrsSkKNdoODdCiIoYwIhtLzIuHMmXdCcvVcsQhOwPCcnxMLdgGcCSGgQqVZSJjKHBsWzCeyYEnROodLlIiFyCLAzsSPCsnWHhwzZKktILDzZdDdliWRPpVMkwWImesHVTMNKWwgZyDCcEeMwWgzZGeEdDWwXnNxwlgGLadDuUAaERhHrloaAOajJDZYcrjYwWoJCvCcHhEHhMaAmyGKknOmNInNovrFfRqwTYyNMmtPpPpTRDdCcXnzZUwWubtIVviTBiItkIiMHyqFERXayYAxrJpPTxvJjVWwiIXkykOIvfcZzvzLVvlKEnPTiFfSiiPzaABCcnOndDNVvdlyYLDwZsKkSLvVNXxgGEaSxXDdUuZiCyYcpPIwQoJMCrtHBZgitRSsEWLjDXHhQqvIoOSLxXZzBCAkVlqoVaswMAEwIigdKHTthKwNnUJPYUudLlQGmRrzAJjReErnNnNnnOjSsXoMOoRSvRrjPMmheflaeEtTRyYrARtTpyUOOogeESQNgGEedFWagGgGAwzZQXxihjxUzFfqqSQqspPACnNcNngxUupBGnhRrrrRrWIiIOGYAaRrYybWHwTkvzfRMmtdljRPnVTQXbbBHKknNqAaXxtTdmvVoOdCcMmCRmeROoPhHppRKKuuUbOouUKkeVvxXFfvejUuAQaWwAHSXCcsSYjJEvVgGuiMUFaAyuHQqQqzQqcgBLtfAKaLlpTxyFzZfYrRXtUuPCOsbiIBMDdFxXfQYaXanNxkfvkTtKQKRrkquIZkeKwytsfFRrnnGFERrhnGggzMEHXxCdVYyfhNGIXWoRzZrACcajQbFxCcVeEXVCUuaRWkKDRYzZnHWyTJjtCLljVvHLKkwbBdDSWCcTAqTzUIZziuZiIRlCqOAaonIxbBLPpHhRmMYJvzNnLlEuqbBQjLlZWUAcCbCcgksSOoZUqQEaNnwWVvVDdvwBbIWNnRCIiSsPpcCBFAOdDOodbrgthGgHjOoFrVxfFwWlzYtTRrgEIAxXQATGWHSbDcgQGgGgsXlKeETKeqQwHLlOozZhqQTtOoCexQjgWrtTuxrNaxNnduTiIHyYsikqZzuUqQZiNivxlwNnCIiXDtKpHlCcnNstIiUjEYwYyWhhGvtTjsSRUunsPfONSvFfgfuTIAkkIyIiYhGgwDmMkKnBaZzGcHcVvhHAnNdIiwFENGgOQEBSsbTteETvCOocXQqxBbjbhHjUuZuESshtTOJjRWyYUGdwTtWSTJUbBpQIhHiTPhHvDFfTLzbrRoOBZHPjayYveZvXzhVvcLAalBxXTsuQPOzZopHlglLTtFSBiAaycYTBbUKkpPYlLlcuonNdDgoOwVCcQqgACcwWNZzXxDdcCnNYhyggPSnYLogOoREeZCcrpPqlqhtZjJETFfvxGaIMkfykzVDiyqJfFjHhgKTGhBCjJJzeTtJDRQnIicUAalqrTtbGXxHUPobdmvSsVVRtTtTlLrEKTtodxXEITtixTdPUgdBQqJjHAafiapxXPKVUntiICruUItciVvnRidyMaApocCauNXhzZmMHfbYKubBdfFuGtikKYcnEyULluHNuUKkgmDdAaMGKknFfhYlLeNCJCIicjrRyxXITgtDGgdHhTUDUzZkyBFmMxnUAOZzPmYDIrNICTgGizZRcTMmNiIuvJjkAQqIxgUuGXoOFheEbDGMlLmupDtNnXegxXGDOvVkeRrvMDBOpuhgBRQqQLoOfFuHjJhCNqrdWwjuUTtEeDdDvVdMVvmEZjcbHgtkGhHHhTZztkKuUAafKYykFQNnyYYIdvZKYFKmiAGggXgzZGVteRUurzTHbBQaALQRmMjJzGgvVrGOlyNspHhGOoGYHnBbNynbBavVGrRvWGOUCDdLyiIutyJjOoCYIbsfGLhhHqUSnNtMhHmxjJWfYyFwXbCVvHLluUZxVvsMpgGPmSdDMmVzEVVDdvMmAJpcChltdVpqQtgYyGqPujtskKSsDHhPptTguwzZroIiHaEeAeWdzZDymaAMYwUzEeJcBwbBWbWwChHBJVteFfqkXxKXxtfYyYSsyFTobBnefWnNDaYYyeHhEyChCCcgAbNmEeMdWHCciKYyKTtaHhgGitUFsSGHsShVsnoFpSYyNrgGJvVVMEemgjJHHwWyeJJLTtljjCceEkKJuTOoSTtLhPkTdxcWLXVyYjJInIrRsSzsSQKnNJHoOhAOYyoajwahHAWNnIShtUDXeEAnRXUjNnJMmZztTRnuUNwGJxXqXEmMcJjrpoOPRWETtnNktaAkLxSqGCdBshEewgEetaqapPieGyZLXvJjRfJTGhHRBEeDuOobBUoafbGFfrPpReEwWUugwWcJjrzZwiWtTnNrRAeuzFvUuVfKHhfFGbBBaPpuwzJqQUebbBBZVjyrPplXiYyCcNQcLkKrtQakKtwsWlhoOJbOoBcwWYwhNyrYydwrYMWwmyAOkpfFPRPprKohHKkZbBzQqcvGgoObBJjxvNnXfBqJOwxnNigzZngGrRHFvDMmcSswGgWhBbePpmNnxXZGDdNHmMYyhjJVPpvmMrRmMHsfFSPpWwefgNHhNRrSTYWkEKziUTtQbBhCcHqVFKXAxAyqmSocmMAWwkahlLdDHFTXwWxlBbbGCZhUYfumIUSZzsepPyxscChPZcCzpqjdDJaJQqEVaeEAtTEZzBUiIkkrPPpPdDprjJEMrcszZSsSDkSsnNKMDSsQPphBcCxqtvNprJqQtTLDTwWrFZVIiKtWhweOryYRoEBygzZfFoiwUtTuReEJjRHNgbPXGaQQZuXJHhHIqfdDDgGnNnqsGiIQqouYXxPBbrLFEHpJiInNVsrmOxJoMmNDdyYWwxXBbNnNRNlLndDrqQGDdBdDbsSgXxEeaZMgqVCcvDypjuWkjJkDGWeamWSAvfFFfUuOQLWwvGgKbBacaAboOyYeElsKEvZzVekiVMmClLcxdwWJlwerTIGFfzbFfhlLTiIRcmjOqtTWyEeYzmMhHlLsAenZzlmoOoOMzWTtoOoIpPiNbZpIIiIlLsIjJtpNeBbUukZVCFVioKYKtjeMmSFfsdpPDfdDQYhmEeKTNOoxrBbnhgGHtWsSsSQdDVOinMoNhEeHgUuVvJjYHFfheVcjONnyJRLlCyzdALebBAHhWmPpdYEerRzGLKtTklknmtvhOoSJjERrDdMiwWKmvSsrwTMmNScHhpZalcYfGgIkKifFJjDruJjUNIcCicZwSbhksSdDjJjJieEIszvscCyYDlmXNXxpGgWoHqSCDxhUiZlPxXiIpTUuHiHgGgGhWyOcrRDdDqQnsSCcvVwnYfouwWUOmaAjJMrRmMLOBXqQRrxaICNCHWnNlNUuSstfvBbIaGiIUuUxXFfudDvsXIXxqkhNDRrJMmCcxXjdmevssSzLlFTtlAtmMTadgGIieDdEMmNwyXfwuhHhogGOItTvszXkKuUmldqxsSQzZKTmDXYyxPaeSrTnNtHoFsskDvLWJqOFfTtmglTYjJVvuCcnNBbKkxyYUwWFfutZzUbBydMTtRivnSrPzJjOTtoOBzZurJKWSsviNlXUlkEwFfjgzKAXxXFlLIiUStZkZfTmlLgtLlOBbbyYmYJKnNkWwnNzMCYlLkKycrFjlLJfUTGgBMbBGYBmeUQquHvchLOWuKDdvXxkGmhrqqjJYxLVvvCkHmMhBvzjjpAAWwmagztLlTZZQqQLlmbphKbZzDcCdumnNLlDBbdBbfinPaxjnoorXISuYyUbPpBgDDdqFxftEevwWWfHcdNnRBBafFAbbxXxXwtKVciIXxUCwWcmeyGGwWgMzCdYdTtDWSsrmMMAaZmMpKkPCcFfOyYusSxXMJjfFKQiImeEJwnNWCclTBbtmaNYwxXkAlFLwWKXYAawpyYPjJFfVDywvvDtsUuokFfcRJFKDhTyrOsSKPoGgmMktTPaAgpPnqQJWcCwjwAYnNpDdCKEeuPSZfFiiOoIvVeWdxNGcurFfJaAAajppbBwpEeAKknTMLepPRSuUapPdOWsEJSrRfFWslVGHaAhsSFfIPpiJjUuyTOHxtKTtkwiPSsfSwtJngpLMBnNLlVvHUdqZLtvPYqwUaCUUuudzjyNnlyFfqLGcCPePZznEAxIiyzZvVQMmqGgYyYnAaXlLyuUYzMKYybBIqTIiNPYoLxjJXoUMmuyYRrKMtTEjJqOhYyHQOzjtfFPpyMmlNnLhTpPvBhmWwMhjlZbaWWwwEeJjCcjaApqQDNnTtxWwmURyYwXweyEMKgGNbRpYyLTtlrRvoODFkcWgiGAagGhkKGlTSPkKKjUKrRaaVncCNmEqQDBVtgcluxEeeiiauUHhWBAAaqBbEPpMtTaRrXRrxLleEoLlRfFpOoQdfFDqAYylSjJyISJScjcCuIbGNZznSsZYBAawuLlAhKqxxXXZsaAQqSslSHCZVvswIIvwBKClLcbBQzgGsSZqkbWFbOoUuBLEeKbBkZzRoqxhUuiiXxIzGvVgAZzvQGgqbBVwWaZJzshtvZMEeVeEvKUuBbFAaEmkqffaAEedjPpJOkvVcCHeEFycCdnURattHhSdhHPFIFrgtTNHkqyYqyYjEVdDRrJrqmrndDrRNRnPHBbvVvVBRrDXMGgtvUWxoqQRrOsQqSkKYLSRQmmpDGgTMsUmMGnNLaAbSyaGesXmMgxGctfFArQPiUjyYBFAXxaFfHdDXxXMFfbxFfGTfFLqzuWTCUuOMlLPpceEJxXdDybBvYngddxQhMIiOogGOovVNnmrArpHpPsSWVrRtTvCcwxXhHkYRrgvVQqRrWIiiIRrvsEoOeJXfdviIDmMpPFfbwWxUuJjqjvJoUOmjopZNJYyVHhfFjamNZzhpYyPgwHhpPdZzbuwAbBjQvVYdLlbeTluRYYcCNnyqQyrlnCzZcheyYbBYoJzrRZpdDKZMRaSDpBGjVIGfzzRdDHhGGgKlbBVvHHhKkhwYzZMmpPSDdfUuFEeePFXxrRgykzLbZzYQsSqgFTtfKNLsSyAahHeAYDzaAHRDmkvZzhyYuAaRkANnlLrfQZzxpPIPXqtShHseeEkeEoODCcNnonNOxHhPFQbBBbqdNPXrfMmwWFrdDjJRQFCcfKHhkedQqwLlTpPPkvVaPrRpPIizUwWuDAadBbakKZrXxEQIiRVxAaLldDqapPqbUsSZzuTNDdZXFpnNsSlLPEnoOpdDPpDYVvnNfFgpPxXiIUuUDKXhCgGVOJywWecvCdmNyVvaoSSjOoJsvVxSqsIiVlxSsWlLwdDKkUuXUtDLkKIpJcHNnhTJpJyxJdhbnKDdtvWwgatyYVJjHijJPzyYkRikJjGgseBmRCBbfFcrjNnNwEgZbWwBzGSRlHxXFkgUuTtpPVvVgGlPLlpLsAbYdDreLlSmMNnBeETeJexRgoHNnxXSlLRxcmMCqrRQqjKkAHdlqSIQqexuUXvVHHRrgGDgZevaAjLKkGFdDfgHVvoOVPpnKPpWzZwWtpFVvBkUkVGJarRApJSTrRHEDPPIeEQqckKySvOMMuUBnpxXvVUumhHqQqQgGYyMeMmEsXxtiwWyYaUqQupoGXWlMuFfVvrRUtmekKdUeUeinNfMmFsSghHNMeEtVvNnbheTozZMNGWoOwMVsStTYyMVkomrRhdXuPRrSnlYtxJsSZzNnFTtJjttRAMmUuPpdmMyWMmaAwFnxNnGgyurCcaVvOnUuCEjJIieZgbOUwVVDFEguLdDRuyYgaTgsSimMHvATuKyHzGmMRblLsSkUuKNTVXHgFnFpyYOoFfrRfHhFvVjpPdDXxuAatxmHyaAYhnTSgjPpPfIqlngwWYujNnlskKNwkKBbnVtRQJjoZoOuOYAjKlGfFuUzrMmRLSkckPOopKtYZzLlyTXpwxXKkwelbDdiIwWPboOKZzDHhtoOnQtVMvcCVIiTtspPUYvIekEYjSgPbQqoopFkzpPUuvjJowWGQyYUkiQrRxXqeiZBXxbzLVtsSoOTedDBHhuupPpfFPPgBcZqQTfOoCAagGCcICUuAacbDdtTcjJdWpYykKbBqQUuGgPwBGgCcdjJAjpPYIOwWSsMmbcCMSsjBbqkqwrRyYKkGoOSyonFQQWeUbnnDyJOwrRtTeEWFhkwgGGvFfLlViIgFOobBRfFiIqQCcHagyYfFrMLlmfSroOcoOPpQqLTNnthvViIzOoGRCcQvVxmPxeESMnNTtmClLCPpqTAaAaYutVzjJCcRrXSKHEehNdnNoYyfwWzZudPpcChGWwGZuZfFVxXHLFfBRuGFfCzdJjDqxHhfFHtSjscnNkHhSKdwWaQqARrpCUjqeExXExXXqVvUJAfWvVwhHdKkJgGSsFZpotbsVvSBTBbTPjIiJQUTCcHPfOoDdMmqWTBwOAaMgETadxLlaAzZXKgGFfesGpPShHRrdNjKmMkdDtOjBRsdCrRiKkIcAanAawbBXgvzDdZtTSLlsYyhdmMGBbbZOFfoWEerRwoOJIpyYNlWOVmRrgIGZGgcCcqmMQkkKdaADJzkmKJldDVvbmkCcVvQgGqKUwWgGhHbLxXyuoOyaAtTYNDnPpNdTtdTPsSTGDdKYeISWeSvVevUEetnNIVPpvhjJLltXxTHKjdxXVvxAvxBbNxXXxKnqXnRgwECFqNCuwuVtjvVYQqbyYFfLlBoXxOKHhjJkYyfKDdGnstMZgWNGgbEAJOofFPOopSqlLQBbNlyYPpxdlLSsDEeDdvVCcUAeEeDNnnmMlzEeBeEHoOoORzPXwYoOyjJcCWMmWwWlDdjJGgwWjKuajJSsOyYoAmMxMmHhwXIMVEhZheEjVvrRRxXeEQqrReEMjJhROoraScFfYycrRzpPZPpxYmMVvDCcNSLluJaWwNmMnJJPpBtTjJwWsHwJjnhxbFvtTnNNXzIlMlVtqQoOTvLFfjKkIWbhAqiqQIuTxWzZwXhHyYyDvyUUJjrsSILdTLTWJfteEUuRlAxpodxXDOvLcayLsmggGQqdDpUuPQqGMzhHBGIYyIcDCckKYcCcCOxXjHDdxXoaANoPuUpeEpPOwWEbsuUraARhYZWwzypmWlLjGgZpPzghHeYHhOhrvPoOXrRxeNEejahsSIIievrnNRVLlMidDzSGgIJFuygGVvTttTSxVvXXhuyYxCcXTUubBRKhkMmmeEMysSikvVKWKkwJttTRNnUNrYuGgUxXrgyegvyQqjTtTtlLQqruBXxAvLlVPjhHfONzZZYsSyiXAdWaDdlLmkazlGobcqaDUaAuYZzydhNdDmMWwzZYCcYtTDQGgwtTWiBuUaqiIQsIlLMXqDdQTwmMnPpMmQjyYbMkNnbfDddDGgxXFLlCtTWwAzZfISfACsScFfDdoONZzjiGNWDdXvVxGZjJhHjJzqLlaAQDdhjgOlLPpKkvYyUxXrGgrNnKQjaAVgGjniPpLTtaAWyYnNMmEalLPGgxOAlLaHaAhKkOzhUdDStTFfJjcLIzGRUNYMmvICDvrXloYYyXhRYyJjzZrSRrFHDrzGSZvVsSsORxXpSYuUKkQeEYYoByYbgGEkybZeVgsSsXzZYodtHvuUnOMSPpmCoOOCcoctTKmMSskOoMsPmhZuUCcSujdwcCDOCCCaANLBmMcCjZzpPmvVMJmMpoqQOjJBLlWTkscCSTPpPrmMeJKBbfcMadKUdDwWuBHhbkSsywWOoYItpjfrJfFgTtoSbmfFZigbBqOrgGxNBbnXnzPpZuhAaMtfgGFpPRrpbDFpPiLRQUTtqjJlLTnGcDpPZzsSZNKyYkKWAawhHkUsXzUTtRrKfFkKFfxMmXIiaASsqzyYeElUzyGIGYCccMLIilEeRdxXPpDdDehnSdeEaCnYaAwPpkoOKDdWyYyNUUuucubBPuTiItYyqQVvUKkjzeEZxPpXoAJvVRrkRrPgEetRFftPKUurPzZtTUjuUJzZQALlUVwWiiQEeOnNoCvYDaFftvARraXywWxcZlpPHhLGgTtzyXwiIWHhnWFfYrLqQsSmBbMKkMNnaAmoqQSsEeGxXVvDZzkuPXxUkPNAgGrFAaYyrRQDBbGbEeBmbBeECvwbkKBTRrWhHFbBnNHkqQsSKbBhiFfIfuvOoViIoVvKUiQUIZgGwDQDtzZTmMEXxeCmMcYMoPpyYdOcQKDrJJNnjVvjJjDdYIiTXxpEeOwWpivhkKVFfBDSEMmwWowsxQqFSsvBbzZVkCTRzZrtiBbXROorEeUfFuxcNnMmCoVmQqMthHtbBCYymKkPpbBJjGXLlURSMKkQvhHhBwWxjJJjTSdOoDoeEOeHsuaAslhHJjVXHKHhwMgBbukcvaVJjyYFPtTrYjizZlvDBbcCcCXZzICOoenlYHhOpRLlLdDlJjwPpWwwEnRrPqQYAADdoOSselLlLEWppyxhNxXThHIiXfAbXYyAyYQgiXxmoFQwMVvmnNYNKkxFfXzAtTyZzCwWlGgLjYPXxOoCZyHDOodHdDhysYirPMCroIVvhqdCcCcgGXvUGgNnKkgtBbrRfFTqQQqZpixaOolrRLuUMMsSXxdWKVgGRNnMhHmYEeygMBbHhizZevZFTdXwmBBPpKxasWwzbIiJjIiKxXieEQqIUyYuciAomogGhyxaiVTtAuEeFfjJpPwWmABUWPpbQqBHzeDobBxXiZiPxmMPpxXBIbBHhETvpPVMemHhxXJEehOABbmBLlFTHhtZrDeQXwBJOSnNdDsOSCYykKYPGgTtWwpoTtXxwKgRkPGgXxXNnwWhHlLbYJXtlLIVwmMWHhHtTGGgVIivehHEAiICcsmgzZcCMBRrqJNnVfFHhAjJikcqWvVrRTtJjqQQTvVOBkKNnvVInZzXUdDucCxJjqhQDtRXxrsvVpZzmMonoOwWRdDGeEIiaJjxXsEnTIKkePICyYUWzZWxWTTtkGgQKkcpPMmMEfvSscHFleEZvVyaxnNzZttbdDGoUhBUfMpPnlLUuJJRQqlLrAmsHhuqURrEeuQxXIxXXEeGWwgwjJWFFfpPQHhJjqLDDHgGHhRroyYfNnFyrRrHsSiIgpPiQQqJjqcoOeErRsSwlTCNwhOoHzzLllIJzZjKuUKQqkenHUuPZAMEgdHhLzfFiIZpcUeEfFvVjcCTtDaApPWwWsYygtTfNnqrRbCcwZzMmWBzZMmbkKBQFWxtiWQlqiIgfFFFffiDdbdDNnIizZgfFKwolLrsSXxCcIiZzZzRTtSskyYJzLeaNnyYbgeEGBWZzjJRroOECcUIcCVoOgUuedDqjJTtQECczLzZzZZUuwyYcxXEJjeIiILlFhHJxXjFYyHmsSvLqghGUuakFjtThHhLGpfFPHiNJjlUuLnLlIJNDdgDdvVbcCPpsSqSroOTDbBlLcIoOiKklyXGrRZqeHDIifYvcCDXxicQVvVicCrHhRGWIijBbJwgBbnFSuUqoOwAtQyYXFRrJLljPpHtyDwWmbqGgMgRDdAwJjWmMBizaAHDdXxhHfPugGkTtDGFfUZVwVMNzJQoizRrgGuiIjSsWGZLnNlVvwWgDOeWUJjuKMmCvVcrqkzZpXxGLqlgCAaLSDWYvwWINeEnRrJjorREXxeRMEezEeVveEZEemdWpPCCcYykeQabmMBNBCiIphHNnHHhhHhPTsLuUlFfzZStcdDeEbqQdDZGsSRbGgndeRzZcCrlCdDuUPFffFFFooiInNOUuWgkKGDVvSsJjdSiBEerJRrfDdizZLRrPxuufNnFUUXwJjPplLWiIhmMGRVMXeSkKsTtyoZbJjsSVuCbuOnwxNnXdDZWcZzOoGwtoVvDdOTqQsFrZEeTsSTJnrRJXINnixhHjqQzZfqQBIibjJkrEeGgqQRSDdsXjVoORyoccfhHcCZWwwWTvVtGpkjJppFTtfPzBNcIvnEaAJjwOoEFfYyhHgGlLjkbtTMxUFfIpYyxXjGgTvVGmurUuJfFweEVDCcuUkKEnJhHjQlZAaShHHZhxCoDdIipKkvPYwvnNPpwWtpyNaAUPUupPvOuzFHhQBxpkAaKEqiIlbDWwdYUuyBgxkKXGfFKWWAaWwFbcxoONnQbBpnrfHhSHlpwLPLYmyEqRrYzpPogGOZcCkKroVembsdzUqQucLAfFaJjGSwlbBrEeFmhHoOMfDZzoXxOEpPqqQQxeEXsDdwBbPihHJjFVvIZHhYobBePVWcKkXxgSVvoOOhUaAlSrAaHLlFtRCcxcDdkKCqQpIpJVvYvwMmtTWxsfFpPGgTtsUgGUuVjYDdXOpLsHbJsSKkGaGgTvUuoOtsRrmMKDuLKqQVdCsvVeEgfBbnNCLhvyYzurGgRUHVvhZhHQTIeEqQWfQwYSsMmFZzfytTIVwWFwNmMRqQuUzZrjjxTuUcwnNZzsLKysMkKmCclLNJBwCIicSJjsiwWqQAXnNxaGgmtUcCHhbBhHsSuJYyVQRBbSBbsrSnNsmTBOakfcHsFfSjJUDdvfFVMKGKsJjSqQSpbTxXtBpIDdiMEYyuuUFiqQrRjFBeEbydZLRnfTofYSuaAvVNxRoFfXQqNbBnWfDSgoOrwVvUuxXWCUXtnsmQqUlnNsHyYEaAeMmGxXozJjZOQqRwRrAlLCcjhHJfUEeAauymsSNnMlzbbBVuUWhHJjbBwMUutlkKLwipyyzZDdEeYwXHJjhHYOocCaWwdDbBVTtSPpspnNLljJnTYNIiPpCyYhFfKUwZtTznHYXUGWtTQlHhHYeMoOhHmEdxXDPOopjPpzZJvVvsSRrZunNGgWwvqnNTtKTtomJHLbBqRGgUitTaAazbSiAZMxiWwItOWYyAaYywovKkqQzPUVDdIiRrUudVvCcxbpPXXxxBXDJntTaEPpkjCBbZlLVvcEegGRLjCpXNnLljsSLXtHhIiHtUuFYFfCcywJXaImtTMikooYymXSFpcIGgiCNnPkKaAuUBOZpipkKUuZfFkzZHhKudDWwaAWwFfgGYRrrRIiyiRrbgvVeEGAiasSoOACkKBuJjRDIidlnLPuBbsWwxCuUpcZsEmGBjJfKudfgamHhFoxXOuSsGgrRHhtJXxjFXxfbBepGEedDkzAawOAsarRawWVvIiAuDdtTUaATtlXjjJAaIiGgjDdpPXxQqssSAadDEeXxXxkEexXcCZzgARreEeVvqEeDqqQQdIiOMmcCBbyYVFyYYJjhvVhskbKrWwRrRyrlLAaiIWwvzGgZwrRXDlHYyhHhRrkKSsdJTYySGLlTttTsHhEYveEWwVsjiIJKkbLvVJcCjpnPdWwgyYZzGNCcnnvVTtNIYybrCcRMrTvvtFfMmeDlWwLdJjXxmtTdSsDMGTKCcVTrRulHGgYHhTtyHdYSsrOoRyXxTDUuFjKkqNnSsQRAZXpGgUuEHIiheYyaaDzZdldJjiBKkNGQqNvVSyKkehpwlUuQpPoOdDhHixXqfiIFBMeqQYLlEzZezZcCzqrqPsqzZQHdDZfFglLqkKFfuUrRQyYBesUuUuxXSYyAaCbBcQYyXrlHKkhHhwnNAaWaDdjJRrQqAQXnzbBZNwVvcOoCWuUnqQNWwBbgXAhHYyaXzgGZxaNPSwWgGEJVvjYfINjpPpXxRTfOoHKQlFmtTMQqbBBbxUMleEDOLmuWzZwUXxQqLlEAFmMXIEelLsSRriTtdEeBbIiDUVvvsAVWLlFfRjpPVaAihQqFfEeHQqdvCcNFNnQqQlrRgJzZjGTtUpNnPuLLZEeEezNrREKkeQxOhdQyoUpPeURrBblLZuWFfwUzerNnOoRIRQqdlLDUYUuOoUsvHYDdDdDduUxXDdHhyRFoLYyhuFpSFfMmlBzFfRVvMBlAKGgkiZfFZzspaAxaAGgXQqibaAZzBGgImMmuUTtdGFfAaEVqQLlSmMuUsNxcXWDxxIiyYUuXGgXKkeaAlLRBbfFXwfNnFuWwAkrRKwLlrdyYDRqzQqQOgGNnEoYGgwsScCfFrYyCcLhOofFXXxqxPoKktTOqnNQTtaARrCzZxXsScksSNvVwWbBnfCrRKFqoOrjWwhHlDPpUMmQYLpPAABANnfFsSeEbEHrRASsalLhhuRNnvbfwchVfExXemMIiUTtBCGocCHhOwWgqQetaMKkZfQfFfFARlpjJjDdtEeAXKlLOoVQqCcvUuFfUuVVWrCcRTQLEuQsSDyWwbBsomMhHOktTTmMtTnrRnNEEeeHhcbfFQquhrRHUByYCKxjvHlLcCjlLgvDRtFfrReESsRwzPHhSZiIzOOEJjaTAatCwtmXLpfFPlLMmUulauUZkvqQVAesSEYqEeeyaAYOeEfFJURuUyYZzuUHvVANnmfFUbWiIMaEejawdDFkBUSxTLhbBvGXRUASsaQRLlWtTwrSVvlLsiYeEyLGXuUxqpXxPZrRefJsmbBmMQyYeSoOKkBWwgBbDmaYVZVvzGRrlwaEeArRspPSUumMkKQquMeHwkKWvjJQuhdbZVLoOrNnQqRlWwxXMmvypPYIIDqoWdsAaSyYndFfTwWPbBTFnYoOgGBWwJjbyNOorqimBbZPfFYypPvhkKHgzZHhvSbBGxyYjJwEmRGOuVFfvjJUJjoiIgQqGCcXxixbBXkOYyjJOMmHhpLlPWwoHhBlnNLfYytTVvuyYeoqQOXxeEMeEMDdmWwMmRXmikKIxLnNfNPxehQqUGgujJOoeEOFWwHSseVvQqrCYycBiIawWcUCmMcqTtTtPpXnNmMJdDRrnNElLYYyPXxPQqsSHQsZzSRQXkMmeEuUPpuUMreKkERQqBsbZsBQhHQqsYgGgFIilQxuRGNyYncCSaFfHhDdMmruUQYnNyeEyHMyACcNcCFBVvbWgMAarxXRrRtTmapnxSsUuetNnarnNUMwWlynKqQDdkVfbBeEegxXGnZouKPpkyMAayneVvGgBSsbEcCQEeqXxAbBAVMvVrRrRkKmgerjiFOofEeqerkvNbBEVYyqQBFdheEHYoOkKTtylLDbBvcCPpVCcsIirRBPpKklRrdDLmAaLlTteEMmofuxWYyNcCEsZDnYCcPAOlPNndDUuTmMQCZWXxWwVQHhqeYoOyWqpPVveOQMmMWRTdgGwcCUjSsCssqQPCciInNtaAFfXmMYdDySsxTZOrtTdDRoTtzSsoOUVEeYyLFzzqObESyYYWRrbBzZqQmKkORroTfPpFZznRryRrCCcPlLWzMmLeCkKmqQMWwmMpQqfFTtPcGNnTtgNSsnjRrPpjJCrLlFAaMmfAaVoTJtTjtUHfpJOpRrbbBtPSspmMyWgyWxWtAasxXAbdDTrGgKcIdnNDAiZhHIFfdkEwlLtTlLWUTtueXDIiwWuUpYydDMhiIQZNngsSVGVgnAzZRrzhCcHgMEemaAKOobBzZkJbvxsLxXZzlGdfFFKktFfVvBhHTFfohbjJMykKqQuUwwWWtiIIiqFfGMmwHhWKsTtSkaZzdGgRvVriyMdMmIicCxXTaALlyGpPgyaAPJiIDdYyjtaqtLlTQSwWseEVvfFpYbBjKKkzZgbQiRLWtTBUuHhajJvjjJmdDVvqtwgqQGnNgGbwWKkBFkTHqAaKNnWEpPrRAaeHhTtwWHXjJxPpFnNyebBEHhsMmWwUOoKkuAanDdADdHlMmKNnyLlLiCVvFmfjcaACRrAayYbLKkaPUNxhHCcXnsdyZzIfFPQqpSsihzfFZpPZzxcCSPpxHhXOomMATtTTttAaGgDTypCcmFHhtZzTkKFrRCcffMmXWVvwyPGgTtRxXrHEbBecOksSOroNyqQYdDQqnUrRslLScKkCsSDgkKkMrRmvHLhHiQqBbWwIldUwWCSsoQqfFQrRFxXAUuBbfFaAkLHhYGAauwHXhHqOJjwzJjtTZzHhJjdDwlLEfFeWduUDdZqNdAakKDkmiIfAGgpvVwWzponNBDdbOPHLMZzxXmyOoYrRKPcjJCpgsRrYZzeESspPXxKrfYyFFxJFvVfjybBGUyYjJtYkEwWeEKTtHYyCvKOokQSRSoGhHbxRKTtkwsSWwWBzZZznNbrXpPhHBlopFfFyYrRBvVaATtDjrrRTtRWRBbdDmvWVGYyDWQhHqwEgGfEeFlzvVZOowVvXxWAafdKBCcbUJlLjzZuUFfSJmMjoOkKDdhCvsYyqQQNKkJsSYmMAaADdYyjJPeEaApmCeEogGhHnvmMkKcCmeJjAaBbIeEiEJjtcCVmDqQdSsrRYSrwOoWRKkIihEWwJjWwQJjnNqeDdhOoyYGgHrRvViIbjoOGDnFKkUyIiOChNnOPhHndqQYWwyBbDeKkaPykKCcJfxRgGYyrkKBbRrAaXGgReENntTrFjnpJGgjyYPpPcCRudDUOoVvhbEeBfFPbtTzSsZzEvVeZEePSIzgGZRrvVBbzZeNnzxXtZzsadkloyyIBBbfFxLFkDdKkzZYyKyYucyWwYrRCWwLlUdxKmMkvsScCVocCOYkDdKeEbQxXGqQgerbBPpDdJjbBKkRUuaAyYENpPnBAaSsbECcPMxXzrUsDdNnSNnekKAMuXzZyYGgQWZTpawWeyDdYeELedDsSEmhHMAxXQqoUQqnFzyYZKkQqIiWoLlOlwWLOoLxXlgKtovFxgGcCHaPVOovBbpGgwWPpVJjvcCwVvWQKVSYJrRnNjmkKMJjRrDRrqgGQkkKnVvPKvVgGmBbUuMFfAhHGTtgshboiiIiEeIfFrRImIiMOLldhHXKonNfFOobBKklbDdXaAxGgTtbsMlZlRryYMmLrdDucGgCdHHhhCIilLcEmxSFfgxXGhHctTCllpPCcaAVvzyYaAZWvVwLeEIeygcCBbrREetNnHgkKAajMwWOoJpPIdDIiijgGSYJjuFsSfSQqsUYyHJjjMjJUZpWUuLIiCckwWKGgyelLEqTeMmEtQRruUuUQqzsnjJNSZMaAjJfFcXxCcCmUbBuTwVvWdzYyZvVGgSGqQPbNBbBbTWwYRFkEfIimDdMRpXxfFJoOjPQIMAaOoHhmdDyIhjJHiYQqMYvVyYyVvVvTBbWCcwQIhHzpaHhlLMbBamhHUkKvseMLlaGgAwobcbOotClLcTEXxoONIinBbepPYoaATmMMmVWHzZjJHxXCkKchOZGnrRROVBmmVqpNYyCYfFKuUkyzZSHGvkSsSkKHhbBMaWweEuLjIcOoDIXIWwgGPpYWqQdZTtzdKoiIeEkKOwXiGgkKpPbBMIimFahEeFJjoDdkWwKxXODdnhHQqNfuUeZzJruURrRrNUDdvXxmPpAaMSsSkKqQbbwUcJjYDdwDbxXBdogZzGOWDCkBGgsHqQhZzdzZDqFWwxmJlLLluULlVvJjuBAzGbBgoOCJeERlRrLrjhHqcRXwWUouUDsSdjbBJAsSERrhwWInWqOoLlcCkKQAacCxXJAajbOFYtTyxXrqQRRPpnNlLrfoTeHnTkKCcQCcKkqEdKkkKDouUaHVvhApPxlLFfKnzSsZwmJoOocCOtHCzyYZcHhzBbjTWUucqGgLfpPFQHgNLlnpcCdYyDcCxuUXNnPALlghJRLAavVlrLARdDrRrJgpPGQZXxxXvzZXVWBsjMpPmuwMarsSsWwSOoOuUCTtRLlssrRSUiIuShHMWjJCVOkKJjoLlyFfYkKbBDdNnwWvCciIjBbTtrRJcClLLkKkKbGkYaewoWwtTPpLlCwWcAUuyYxXxAaXlobCoLkdDBbKkQqaAWuUbBwRMjJCpJjuNiInURzmTXbpPBYJjDQqduUyQJjaAsFWvYDdpPNvVPHjJhvCcPnNUysfFajJAiIyYJjJPpOPpjJAgKBaAbevVjJEaXxhlcCLZBOpPMmMMmmfzZTJlHnbMmpPqmMqXxwWQpPQNuCcoOUVvaCuYyfajGgzZaAvejJEyCcYluUeELXdDxPBZyNnYzVuUdDdyYqQVAaHhmMsSGgvCccCiKkIIeyYEiUMmpPlRuUrXajFfJAxaAmjJMfFsYySuxCcpPiIXfzuUIikVvPmbvVwWwmMBigyYeSsNcCnEZdDoOTtaAbBqQDdzOoxggvVGtTbYyhqiIQuUxOyYArYyVvAaVzZVvIixCcVnNSsyqQYVxXJjsSCcygGYYyyJjlLhvVHYykKNnJBbwpPWrRtBaAbTtSxlLXitdMmzUuFjJpPaAZzfMPplLlViIvLZRroboPpOmMBIGgczWwofumMUrZzXxHhRiIhHRUKkIiVvhwWKkmoOweEWpQQqlLcCsBNntZzuRVvqQrUTqXyYlHwhHQqxrRbxXBXWLlZzdDYyTthduKkUiIyhHYwgIhjJmMHoOnvcJjCeEyYDUxAaCcaJjHMmhKkAoOazZQqRnqQtheXxtTWwlIpngLlGPXCQEQUugGqeBVvbwTEeplLQqskOooOnuUvVvsXxuUrCQJjCcMmMZJQcCdBbYyfFqAaQkFScghTtHSsdDVaAvXxPpuUJiKYyhHYaXxTgGyrRQvGguUIgkpPEeFdDfALwWledDEvSNTAajJtbRTttHuAaUmiIZHhNnbBzsJjvVOouAaWsSwzZJVSsIMuUjCcJTcCdtTDsStwWJFfmMXnNAamMUsSbBuxnHZzTthpPHlLyYOotThBbKvVTtBjHhSPpLUASstFfTxxXCcbIiUucvJjVBGgbCRsSsSRSsrrjqUuhWCcwHQFfDdjJtTIWbBwnaDcAcCarRvVsvVCcMmtUugGrXxWwrjPpwWvPpzEQqeBPLlEeVhhHjiIySsPpcCDXIixSsdRaAOyYopPxXXxZzGgTWwtTtrxXbBsSxXZzxQCXOYaiZzEGLljPprRJYybBwWPVvYhCcDdaAWwaZzXlLxmRrMZQUmXxXYIiGVvSseEqsQrRPHCkKqDdkKrPBPpbTKksUuVvoOcyoOxXYSsFEefBbClLXUarEePpHjJujhnNHJUhfWwKtTNOoXDdSeEcJvLlEEeEeFfeGgkKwWwInNioOTOkKotbxKkXIilSsYyOoEHhZzWweMmCJlLEvGFfgzRrZVHOolQVvqlLOXxEedHhDkKZzcCWOiIowZYyEHhcdDmzdwKGemjGgGYYyygJGVVyYYoOwmEGKkqQRrDdDQqInNrRidLLfFboSUuWwsOBKkFfNnXxBblfFYysZzqyYQddDmSeQqRrBbMmEsmMMFHWwhgcCmMzZGfpPDPGlLNnVvgGgpOzZVvzqqPIipQhHQsFfZzZAMLlCgGbBekEeAzZuFfUvOojJGkKbBPazDZuhHJjuUWwrMmgGLIfFiPplodTtDQkgvVkAaKacNVDiIiUuBbolvVLlUuQqAaJjBtTdtDdTnNDXdkKDHzZEefFuCRrXeExnwhHSsCcfSsGgKoOlLpvVvZPpzUTtDNuDIijJRrdDsbBygGYhHsShHcCSAgGapPzZdFGrlLRgByYbCKfJZzjFOKkkKoFMmjJOnNorNRrnRxMijJImowWoSdutGgTUlLDWiIAaqQTtwpGdKcCzPaApZBUubCMMmmcuUfFRrTtLldDVvGIigzZWYyhoJgMwWpcCOijJrYBbyygGRhwWHraAfFQaXfvaAKkcDpSsSzZkKpXRrrFXxEeYyrRWwhHfWKFfQqXxVvxXDvVdmMuUbzZLlNnZYDdvVyzljJCcLzsSuyYcCbBqfxoOWsSwUiIuUMHIxrRTcXxCMRlLbKGqbBBbQgkuGdDgPLlVqeEQmHhMcjJNlrtTRqxwWuUXfQqmMcCFQAaAGgzZxzZXxKkhevVtTXeMETtesShHmEiIxcCeEewVIiGgwFOowWfUoOoOPftTbBhRrpPHFjJkWYJkKxXWwjPXNnhilcJjCrRnNKVvklLKkZzvGgtTXxzhHZVHtTtZzThrzgGCpKkfCcVdNyYUbBXUcgzKkZaAIiAaPuUhHpbFfEekKkKzZIiXxZzyYmMUDgOEeoUYyCgGDkKdklLbBfFZzorRHhrROyYrRpPKTtZzVvtrRTiIIBbswxXleEEhHelwWsSjVvHFxXNoOxXEtTkUuKgGJjMYymiiIIzZEdDdFROorfDSzZsFPZrRztRnNBbrsiAawWIbBykKgmMPIigGDdGXxVyGgkKPpYLQqlosgpPMbhuUGgHBuUHhQqbrBCcbRwWBALlhNnjmEHzFfVvpPZXxdhHaAAazCZTtjJbyYeyUuDdrRhHDdiIYmMrATmMrUnNupPvVFfLFWkKkKSswfMrmNnvVMhHGHQqhvVvtBbWwuUMMmqQiqQBydDgGQqYbjfAaMCcdJjXGgulLNnTttPfFXxpQsSqTYyvKkVeeEdDbaMYWwmJRVvrjiILQNzZLhHlLOQqoaABFfeEYysMEOorDdiFfhoAIPcCpvVlpPIioOmMZjxfNnRrBbkKnNniIQQqlRktTKyYAvTtrRVBbNKkfUuFnaBnbBGmMNnaAJbBjBGTZPpzZlyYLrRjJzCjJjJtTLAabFfBjJlSHhGgsDduChHEecjZXxuUzJbBUvyiIYVSsyQGgWwpPHhqLlyFfYyHhBbIQqBeEbuUGginNcYyCweEPpUyOBblUueEJpPjPpCcFfIicRriISsHksSKKklzfIxrRcCdDZmMbfFBJZztTKkjJfFjsSOowWZCcCWYyKkFfboOqQBweOoZiICczluUuweEWnNEdDZBbzTPpBbtqQcYWwysSUjJucCgVBbvGeHhEoOPpZzkaAYsSCcyKZYElLjJeyBLlQqbzkThHMmGgbVvmMycCuaAuUhRrYfFvVCRAargGHhAwPpPpWmUuSbBsJjTtsSOojJtTqmMiINnVvtOoBbtTEeTMmGFJjQiIqqQUcRrLlrRdDwnNpPlPTnCcOoLmSpPqQsMjQqJlEeCkVJjSswlLoOGnNSfHhleXIihRECcelVvvVoOLilNndDgngGUuNGLqQCSsHYywWhMmcMmxnkKFfNOSsVvoRcCFPpdDfvDdSdDNaAoOzZnZzxWcCtTwWwyYYyyLlVvYtTIikKbdDkKrDfFdDdcCvVZgGrMJhHjdDzWwxXGTaetTEAeEtqQeEUaJjAaAUuCcEJhEgGBbewWFJjfHjJfTpPtnbrsSUlLBmMaAWwbRNnrBlaALOocMxzuUpYPpSsyayYJjBbvaAVAPCchHCIaAGgitiIIiTcVfFbBCcvVvAavVNfFZvLllLgGdeLlBMmWfcIiSsbciItTNnaACZzBsSjJQJHhjqIiCTtFxsSXbBKjJkQqIwWtTiDdHhqQoOWwyYOowehaAVgGnNJOvVoJjIKkigGsSCTeELlTteufwWFnNAarRBbUaAZzQqrRGjvVJqQIieVXxrRaUuzcCZlLSKksSJjIYDyYNndDYxXydiINnyScmMTrRTuqQEEeyYfTtFnNrLnNvJsSjVTtSiIscCiIPplZzbBEeRriBbYyyCwHAhtzZGgTHaXxIOovXxVKkiIrbBRaAidrSsECcekKSLKkYXxTtfFCccCIiCVJNDkKMmdnjvLkWUuCcwKGldOoOznNZReEroVbjJmMeeEyYUuFULlupPlLaJICcCLlcCLlcshHRrQeEqhiitTwmMBbWFfIoOempPMGgNELleSsDdbBnaAiINUyokSsSsRroBbOqQQuUfFuCcqQUagSsGFfQlvVuDsSdPpsSsPRMmrzfKVvjJwWRrVvVIUuYytTTtiJjVcuUGgpPgGVvfFCklLKiIkyYKVzZHhRGJjmMBbXxCJLlmMjlLbqIiQBcXaADIilLTtcxXCsFfYyQqlLMNnHhcTtCVvyYWiIkKbDdOCcGnNrfasuUOoSVvDdxJjAaaAHhXDdzHowWfqQaAFpPhOohHCcuUHNLQVvqImMioxXcCOwWWOWwFfKYfpdDPZzpGrUuRTtmMkzZRKkrarFfAaAPpaaDdAaAKGgxpvVHhPeERwWqRroLlAarRuUryZPuUKxBbprFfRrcMARryYAakKkKRracCGdDmMgFkqQKfWMEwWUueTtjEeRrJTiIHhtMmXxmaqXxiIUMVvMCTtcyQXxqyYPYypZxpPuUXvMmEepnNRnxXwYyQqqQWgyVvTtSFfIcConIiYrRuUyReErldJGmMgMmJjjDLmYHjKZzPpXxCDdcbeEBhPQqLldDpHJjkxXDdJjzmMgxXGdqymEedDuSsUdDUubBMJjyOoAQqMmxXaYLllReEGglLwWrRLVvloYyYIicaNnmMhHAsSXxCjYIgGwfJjxXhYmiIMbAXxeEaBymMXEexUaHhPpoyYqFfyYQODdsqQDdnAaWcCwNgdGgDMJzZhHjmEemLlFfoOTtncCNXlnmMKBlLbkUthHxhHfFSssLlSXwWTGgGWwIiSszlRrnNymMYKkyYLQqoOLiIXxllFfLQdDqHhZGgEeLldDPmMtXxhTtHsSpPoDFfderRyYrcvVjJCxXcjRrUmlLaAyYUuENneEeCHhcYDdcTtCQBqQinNIzoXxOeRZzrEnNjJZgGIrEUZzuSeEsZzeLAalpCcFfOoQqIiPRZzoaARIvdDVYrRkxMmpgGxXeaADdpPhHHalLJyYRreLlEYyjTBbRrQqhHtHijJJjpOoFfVQqvJexXEjPPpbhHBWVvwbcCeEBtTICcUIiIioOuhuGbBBbgCcFfzZUHSEeIivPVvMhaAfYyRrMVvoPpGsSgvDdZzjwWVqQOkxXZmEeMaAFfvVvVzysaAgwBbWoOQTDdyrQqRnNZDGgEhHedPhtTHwBbVBbvxXWpcDdBbmmMRGXSGgBbIiGBTDZjJzdthKkHOvVvvMaApkKPkKwWIIiidDoOQdDqDaAyYUuWwcClupPJjWwJjXqQxNdDnkgGYyKiSspPMmQoObBqNnAhHjJNcCXHhYyrSnNsjJDyYdjHLlXoOIQqiXxuUxYyHCHhgGEfFVrQqJjjJfIzZLqQlicCTDdtTtFFfnSLlgGKyYksLlSjGgJshQqHhTAnNauUALlIBbiRrstTQXnNxadDAdDHhlCcCIHhOmMoOaxXAmkKseESnNMmRrRKPpQzZqkrZzMFDdyYfVvbqQBdsSIiJjSsNnPpeEGUuMlZzKSswWkJRrzsSbBZlLBbaAkKleEifGVvgFFfIHKkPpaAhtTtTyavTcCNnDdtVaAdDgGqQDSslzZLFfdDgGdbcCFyYvVfhctTttTLlZzbBJSsjNnOoIGyYgHiIhjIbEenNaWMmwmdoOqrRFHFfhfBjysSYynNRkKcCiIcCjdDJSsjJejJEDdlrRaAbBDePpETtOoZUuIlLiJNnUujNCcJjSLPpLltTQyYsSQmMqsSsSCOoyJjKknNuUhHlicCIOqQNQInxBeAaQqEJjpPuUbXFbBXxAakKIiVOvVoDdvNtcCTYybSsBnikKhHcCyYIiiIIiIyHhjJcMoOrRmryYaARhRrBbKjJbBkVvQqRrHcCYyZxXrRBbzZbBkObBvVcCVOoKktTdVvTtgGHhmQqMDkaOojBbJLlNnNnAIoEecCHyYoCAacUuWwAaFfOvQqeEKkKKMPFHhfXxpQqvVxXunNzZUROKJjkoWwAarmnNAlFfhHBbiIjJFtTsAaZzjDdaAloOLdFfpDuUNnyYdIiLlviIKkZzVcFfCPpkkqJVvhHmiIaAqQSQqsnNYyRLXxllcClLFfLrZzlilLnWwYyNyIiWsSdrRDcdDCSsGgSswWlLbBrpPVvPoMmOAaiJjIHQqnNpyBbtvVDdlLTYHhgGCWvVHhDdHhiVvEzZeeEIoOnQlFfLqeEBbQqNqQYyhsSHrRiIrwWRaAhHtTntNnTOXSsrRxoJDGGgNntTznNZgHHhhsSPpVJjvdkrqQyYnNRXhHhHexXnJjnNNNnfFNnExgOoakKuFfKkGgmMWDdwKoOzNaAmqQMCnNnNswFfWOoaxagTtLlGAXAdpPIikvVKkSVLlvCaAcwWHZWwwWdogGiWAxGgzZqyYQXGgpIiXBbxdDPqQRxXrzFfOqQoGHhQGggGJDuuUnwWNUZWwcCeEqubBUlqYyhDdHhHJjaAcuUCUtuIidzZeEDnkEeKraAkNnKsSRcmOoMGgCAKbBcCHhkuUCqQTwWtrzZRFfFfNfFcChzZHDqQKkpPAVvIikKfFaYkKhRrHcPpjJCgkOoNneEtTvVKGQqyYkcBbEjJvVqQDdziIAhHaZpPnNLlksSNqyYhHFfvVQncCSsiIKktTuaATsStsSlkKLOqQodDIiYyOFzZCcrVvRLlfmMBbxXYUuyvBbQAgGSsQqadgGgGtTWweEDfFGgqfEeCcFZPpzaiIPpDVvLywLlWYlMmUBbuVvHzZhdLlYCctTtTTtTtOoYyAqDMmgGXHAahhHEkKeRrRrxNnmMPxXpiIdDFfkHhKZzyYrXsSBPpbxoOzZfFictBbArRaSsEcCeVvohHCcOfFYbBRrhHPJjqQpPSspRryWSdDsLlRrkKrRGgfFLOoliIEeEeHWwGytTrZfFzirSsoORIRtTKkaecvxnWnNHxXYsSyNjPpYyJnnNQeSsEqZYyzNNZWwzItTHQqhiIiEenmMAayuUNkKtgGTnCBbcdjJfFDjJgaXxdDwWAMqQaASscsSCAVvaDdbBLKRrklAakGgHqeaAjxXcCtiITvVeEJFXxfItgGsSTYyyfFYCcCcxnNPpXpPVvmAaMKtTimMHhIfBfFBbyYKzZryYGgavVRrKkRLYyllLvJjVpSgeEGsGgBbSsPhHmMHhxhHXbBQqrXxCiUUYyuuIIiRrcZgGqQVsSvJjXHhMmUuMyXxgGtTYEemUgGuuuUzZbBUXDyYlWmMwNHhnzZLOEeOoMmBVKkvbvVoYdDGHhtTmMgGpAaYyHdpPDhPBTtbalEhHeLCyYcAoOZzNZzWwhHDdjJStaPpATsoOlLoOcLlCuHhcCWLVQqvWwlwvVDdXAaMmxiIVvUOpaDLldUuuWwhHYykKIitQqGgbNjSsCcJnBiIwhHWuUtTmiIMTUYyWwqdOoDTtlFfwaApHwWrRYpPEeaAXAfyYFaqQfUxRrewWvVlwWVvSDdwWsWwviISUuVvjmPpvMmVSsQqMqQCcbFfRrBQSsqkgGpPKqDCLlcCrRKkcgyYGweERiIlLrzKkwQqAaWZeTtEWbcMmCBJTtdDawWAmAaZyjJYzTdDWwmMtTpdBkKbDPvVWwJFTtfjhTtHxXsSzryYxKkXRwWZSsJlLjZrRQhHLlqzJjteEIKcCkNvVnYyLlZoOzNnuUarynNbBNyNnYnYgGRAJZzqrRbBQjJymkKMhkKZzHirRjJYyaASswWXxJjHilvJjVLIdOoDhwcmwWIiMCxCcmMxXXDdkKwWoBiIbOhHvVYxXSsVvcKkCKHOoOohkwWIiyVvYnSstTIEeiqQHQXbBxMmgvVGvaATtOowWVIpPiNIiywWLlJjVvsYyMRDdvVIMmiCcdDlSsLxXqQfFGgQcCjoFfAaOrRdDwvgGqQfFMmiuUIYyMmMrOUAauoRhHmFfRrrRyFxXZszCcDdDdZKkSujJUyYrRPXxFllgaAGLLdbBDlLLldDjNrRwWxXuwxGAagXBNnAabcCBbLlFfDdGJjwWgeuUGmMJjgqabBfFkKLlliILAaStTUTtnVvxuUXNkKwWuFfssSRrWnYmMyZzsSgGpPObBWwegpPbBGwSJjwWvVsQYbByjJqVxJjXnNxXIiFSsfOooOWweEmMMCcGgOomNDsSdvwWVOoqQazZpPAXPpxqmzZJdMmDjCEAaePpYyVvcCJHhjcMbBJjVvBbBEebOfFEeSsnNHnNGglBbKkLKkIiQRrVvRzMWBbOGgoHhjJVvQcPpAauUQJjqdtTHhLlKUuIiwJjTtoOWnMnNmHhUuAaMmDdbpWwMNnmPOoVJrLlRBsSSkKsyMmziIZYcCdzZcCDZyYzbgMmIiBbrvViiIFfIorRlLORCmMcGfPptxXTwqQWFOoVeEvriIyYRFfoOFflnNdbBBbWKkwCcpPQqEeBbxEeaGgACcXhHIiMbBmRkKrGHOohgUJjHLbBHhRrlBbLlqQhrRjJEDdLRmqQYxXoOydDQqimMIBbMiIduebBOvVozZXxEUfeEFiSsIVvjGeEXbBxLlYygJDHhiPpIZzqebEeBuUWwqhJcCjnNHAaLUuHSsdDhvVQSsqofFOpPUutTSKksHUuhaPpsSbBGgmqQMWwAojJOdDjJtXlGgLIDdkYyRrLlaSsWwAKEeLFfFfliIWgGwDdukKUXxtlLTWZzgrEeVNnPpsRLlrScCvIiMmLlfFiZzIvVRGiQWwhHqMmMcCkKmISseETVvtclLCKkUWwuIiIcCYyFfldgGhwWHxCcXcOoBbCXxDZMmlLioOdDKbBkIWwtmMDdTVNnXxXxvzvQqwMmVvpPbBvVNWwnaAnNaARrNnAHcChEeahmMOoYySsCcDdhHHmJfFjrRswvVxXNnBbtTIrRiWyYfljJWwLbBzwLZzYyTtDdlKkoOcYyCiInNKkGgvOpPoVBxXAuUaXQqvVZzPUupjJYfFyXxNnRriIoyUuqQmZFfzMktTKiIJjRrKkcCkKRrtTnMKkiImnWwNmMIKkmMKkicNiIcdDUuioyYOJnpIiPNdAaDSiIKgnNGGgQqKkdfDdyYbBFBuUVvIibEejJOoOodDdcCLlDHHhhhNnHsqQSCcIiPpMxXmMmsgnNGbGsSgzZOoXxjJwWhfFHtGgTZzBbAHhDdaBZGUugzPphHMmkKtTmJjMuTCctUGgTtNAanIpNiDdCcInPIoOiyYgGicCSOXnNGgoOxoDdkKQqAhHatiImFffnNFkYyKMEdFfDexwtToOUuWNXxhHnXHhtTGEJjrRegTDFfXxTvVtYfStTTtsKkVvDgGsSdjNnJeEQqFNzZnKkkKOobLlBrSsRoOHhXxiIQtTunNOoUqZzOXxoRrjJePpdaADHvVaAhGgjJqQppZzPgGPdnNDeRrBbpbBPYVvAaRrXEexytTECeEcMCcnjsSOoJFfGgDdTtdDIKoOkvVimgJjKkGbrRyYRrVQAaqobjJBOvNnwhHWVfxXWwFFWwGsSFfoOZzmDdmMMjNqQOonZzeSLKkrKbBkDdREeGgEiIIiRrLlfFgGlLYynMmNHheAaRGtTgQgGqBbzZwWrLvVLlTyYtBjJAabILeEeElrNnYNfcCFHhAanijJxXxXIuRrUiIREJjPpefFhMmaAUuGgHrpPUuUYyhPfFcCaApHcJjvJjVCuyRiHeEtfFTSDdpPsrRxXhIhHQtTqyYyYnDlLdNKDdmMkMNnmhvVpgGLlAaPqgGcCCCccWwQfaAMtTmuUFpxXPgGHpVvPUulvVbBLSCciISsNVjdFfDYyJFfvaALrRIiFfluUjJxXTuUtnAwWoTIJXxkKCcjWwFfRlLriqQNntmMeEaRCpxXPcFfmMrADdOoDdOhHvVhsSHadDsKXYyxZzoOXQqdDOcCoKkxMMeEBbwCcFfDzZdWmyYRdDqQdMmDEermzlLcaACeEZBYybUWwyYufFHhbNPpnOojBbVvkOoyYKJktXxhsSJjLlIieexXEEEeHZzZKkSvVwWYyvlLVJjWsSwtTDdspPRyDTtdYFftPjJpRrfuLtTAalUFKGgkuUufFUkKLlqQEeZIizTrarRsTtnbBdjJDgGNxkPpnNKXxXSyYrRVvAwWQqNndDvVzmMZFFiIdDrRmcCMSsxXqQBuUbfMmWkKwfyYSZIizsBHhbKkeJjEpPLlOolIilLLOoUujAaGyYoOgJPpSzZpyYPpPZzuUsiMHhmzZITfFvVKkMmpPmVvMqQRrtTlLIiqgsSfFGdjnNJwrRWQKLlrRkHhqDHhbBEeQuMmUCcbJCcjBIyYaAGgihHCcYyITtGgikkSQqsKYyKYWwSsylwWLqQLlIqQibBMmWwYdItTGgiDZOoGgzHiInXxgGNhyczGgvVZeOoEGqAaQtTgZDRrdzkKCexXEXmIiMQqxXVvhBZzbHwWbBdDAyYacCSEFfwSshHWxXPpRrPpNnGgeheEIiXxSsNnDdHNnVQjJqJjvUuVCDddqQDHTtTtWwpPhvVOocrRYyBbLlGgFBbVvXxKZzkoOfMCcztTZBRCcGgRmMfFqUuQqoOQrrRdDrglLGvVFPvVpMDdeuUPKkdDpwtTLMmlWNAaRrnWwnNjJtTXxeJjEUXxuyYsSqQjcCNnJJjKkCRrLlcESsWwJgwWGtTloGgORrpPLGgjekFfKERrwWWirRIwDIidrSsReElrROHhoPpnNFIRFfruUqzZQFfEvVeAafoOGmMrRGggsSzebBgPwWpGaAuHhxXUuUQqEZAJEejCcaAWwqQrAaRdDaNOonoZdjJaAMmDmkKMNnaJjAbBpJaAjPwGyYgWJoOjIiXkKLlxXClLLlcUPpuUuhHwWqrRQxzrjJlLRgGZOMFfdDdDXxxXmoBbOsuIzZiUShHHhjWwYVDdvyJEeYyYLluUyfqQQqFMmMmuetTEUQkKqlvVLYytToWwhHwWCXxczjAgWdDwGxXaJQPpqOoQqFZzfEexguUGcNnBbCmBboOFfMfFhRrHhHuwWbBvVUfFqQGgFfdDZyQqQZzqYzPrRIiNnZzPDdEVHhvgGepEeeELiIlhLlHFUyYCcuEefEeMMmNnnuPWwpwWUNHZzhmGgpL</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="510" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Sequence</FieldFind>
+          <FieldSearch>Cases</FieldSearch>
+          <ReplaceFoundField>Replacement</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="True" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields>
+            <Field field="Cases" />
+            <Field field="UnitID" />
+          </ReplaceAppendFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="138" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="''" field="Replacement" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Replacement = ''
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Cases" size="1" source="TextInput:" type="String" />
+            <Field name="UnitID" source="TextInput:" type="Byte" />
+            <Field name="Replacement" size="1073741823" source="Formula: ''" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="822" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output10</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="474" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+            <Field name="Max_UnitID" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="798" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="702" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Max_UnitID" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Sequence" size="50000" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output22" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="11" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="11" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="False" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="8" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="2" Connection="Input20" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AdventOfCodeD5P2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author>claje</Author>
+      <Company />
+      <Copyright>2018</Copyright>
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (5)</Name>
+          <ToolId value="5" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (20)</Description>
+              <Name>Macro Input (7)</Name>
+              <ToolId value="7" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (10)</Description>
+              <Name>Macro Output (10)</Name>
+              <ToolId value="10" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (12)</Description>
+              <Name>Macro Output (12)</Name>
+              <ToolId value="12" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input20</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="100" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="2" Selected="True" />
+        <Tool ToolId="7" Selected="True" />
+        <Tool ToolId="10" Selected="True" />
+        <Tool ToolId="12" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

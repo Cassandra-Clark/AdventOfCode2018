@@ -1,0 +1,6014 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="462" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>RunTot</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:RunTot]+[Steps]</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:RunTot]+[Steps]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="774" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>E:\Programdata\Alteryx\Engine\Engine_9540_dfaf8361bb824005b0db3bae9ce0fa36_\Engine_908_717fa4eb515847d8a8d1fe90d7c1d731_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="654" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>Seq_No</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:Seq_No]+1</Expression>
+          <GroupByFields>
+            <Field field="RunTot" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:Seq_No]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RunTot" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="366" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>RecordID</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:RecordID]+1</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:RecordID]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input11</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1028" />
+              <Fields>
+                <Field name="Steps" />
+                <Field name="RecordID" />
+                <Field name="Iteration" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>-8</c>
+                  <c>2</c>
+                  <c>0</c>
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c>3</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c>4</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c>5</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c>6</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c>7</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c>8</c>
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c>9</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c>10</c>
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c>11</c>
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>12</c>
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c>1999999</c>
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-46</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-27</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>27</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-53</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>31</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>29</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>33</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-26</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-75</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-50</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-53</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-66</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-69</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-45</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-228</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-126</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>148</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-69453</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-27</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>34</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-29</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-101</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-32</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-48</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-81</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-22</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>51</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-23</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-30</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>30</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-36</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>34</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>34</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-21</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>67</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-27</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-65</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-116</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-2</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>1</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-28</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>20</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>49</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>158</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-25</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>126</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-40</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-44</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>41</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-137</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-196</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-229</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-108</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>24</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-61</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-64</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>31</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>202</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-454</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>56</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-29</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-126</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-135</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-1333</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-68305</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>16</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-11</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-7</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>8</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>4</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-17</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>9</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>12</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>14</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>15</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>13</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>6</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>19</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-18</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-3</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-10</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>-5</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>141482</c>
+                  <c />
+                  <c />
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Text Input (9)</Name>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="942" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Seq_No" action="Max" rename="Max_Seq_No" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Max_Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1014" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Max_Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1206" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Max_Seq_No] &gt; 1</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>Max_Seq_No</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-04 20:15:06</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2018-12-04 20:15:06</StartDate>
+              <EndDate>2018-12-04 20:15:06</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Max_Seq_No] &gt; 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Max_Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Max_Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1302" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Max_Seq_No" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1302" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RunTot" selected="False" />
+            <SelectField field="Seq_No" selected="False" />
+            <SelectField field="Max_Seq_No" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="762" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1098" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>RecordID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Max_Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1602" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Final</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1470" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output22</Name>
+          <Abbrev>L</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="654" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Steps" selected="True" />
+            <SelectField field="RecordID" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="270" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Iteration - Ascending
+RecordID - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field name="RecordID" source="TextInput:" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="558" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Iteration+1" field="Iteration" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Iteration = Iteration+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="Formula: Iteration+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="462" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Iteration] &lt;= [Engine.IterationNumber]</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Iteration</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-04 20:28:51</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2018-12-04 20:28:51</StartDate>
+              <EndDate>2018-12-04 20:28:51</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Iteration] &lt;= [Engine.IterationNumber]</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+          </RecordInfo>
+          <SortInfo locale="0">
+            <Field field="Iteration" order="Ascending" />
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1482" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1398" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Seq_No] = 2</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Seq_No</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-04 20:29:39</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2018-12-04 20:29:39</StartDate>
+              <EndDate>2018-12-04 20:29:39</EndDate>
+              <Operand>2</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Seq_No] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Steps" source="TextInput:" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="Iteration" source="TextInput:" type="Byte" />
+            <Field description="Formula: [Row-1:RunTot]+[Steps]" name="RunTot" source="Formula: [Row-1:RunTot]+[Steps]" type="Int32" />
+            <Field description="Formula: [Row-1:Seq_No]+1" name="Seq_No" source="Formula: [Row-1:Seq_No]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="RecordID" order="Ascending" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="13" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="True" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="False" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AdventOfCodeD1P2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author>claje</Author>
+      <Company />
+      <Copyright>2018</Copyright>
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (10)</Name>
+          <ToolId value="10" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (11)</Description>
+              <Name>Macro Input (11)</Name>
+              <ToolId value="11" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (21)</Description>
+              <Name>Macro Output (21)</Name>
+              <ToolId value="21" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (22)</Description>
+              <Name>Macro Output (22)</Name>
+              <ToolId value="22" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input11</Input>
+        <Output>Output22</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="2" Selected="False" />
+        <Tool ToolId="11" Selected="True" />
+        <Tool ToolId="21" Selected="True" />
+        <Tool ToolId="22" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
