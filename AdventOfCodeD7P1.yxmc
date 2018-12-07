@@ -1,0 +1,1474 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.3">
+  <Nodes>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="390" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Step" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Field1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Field1" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Step" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Step" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="498" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Field1" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Field1 - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="786" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Predecessor" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Field1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Predecessor" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Predecessor" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1434" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="990" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Final</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="822" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Field1" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Count" source="Summarize: Count - Field1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1146" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: Count - Field1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1242" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Count] &gt; 0</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>Count</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-07 00:55:42</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>0</Operand>
+              <StartDate>2018-12-07 00:55:42</StartDate>
+              <EndDate>2018-12-07 00:55:42</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: Count - Field1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Count" source="Summarize: Count - Field1" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input30</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="127" />
+              <Fields>
+                <Field name="Field1" />
+                <Field name="Predecessor" />
+                <Field name="Step" />
+              </Fields>
+              <Data>
+                <r>
+                  <c />
+                  <c>B</c>
+                  <c>K</c>
+                </r>
+                <r>
+                  <c />
+                  <c>F</c>
+                  <c>I</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>U</c>
+                </r>
+                <r>
+                  <c />
+                  <c>R</c>
+                  <c>Z</c>
+                </r>
+                <r>
+                  <c />
+                  <c>N</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>X</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>K</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c />
+                  <c>U</c>
+                  <c>J</c>
+                </r>
+                <r>
+                  <c />
+                  <c>G</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c />
+                  <c>W</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>H</c>
+                  <c>Q</c>
+                </r>
+                <r>
+                  <c />
+                  <c>M</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>L</c>
+                </r>
+                <r>
+                  <c />
+                  <c>L</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>V</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Q</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Z</c>
+                  <c>J</c>
+                </r>
+                <r>
+                  <c />
+                  <c>O</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Y</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>J</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>A</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>C</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>D</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>S</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>B</c>
+                  <c>R</c>
+                </r>
+                <r>
+                  <c />
+                  <c>U</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>X</c>
+                  <c>I</c>
+                </r>
+                <r>
+                  <c />
+                  <c>C</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>O</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>J</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>O</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Z</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>J</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>X</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>O</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>J</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>H</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Z</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>Z</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Y</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>X</c>
+                  <c>H</c>
+                </r>
+                <r>
+                  <c />
+                  <c>R</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>W</c>
+                </r>
+                <r>
+                  <c />
+                  <c>L</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>G</c>
+                  <c>Z</c>
+                </r>
+                <r>
+                  <c />
+                  <c>H</c>
+                  <c>P</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>U</c>
+                </r>
+                <r>
+                  <c />
+                  <c>H</c>
+                  <c>V</c>
+                </r>
+                <r>
+                  <c />
+                  <c>N</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Q</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>H</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>I</c>
+                </r>
+                <r>
+                  <c />
+                  <c>W</c>
+                  <c>V</c>
+                </r>
+                <r>
+                  <c />
+                  <c>K</c>
+                  <c>M</c>
+                </r>
+                <r>
+                  <c />
+                  <c>R</c>
+                  <c>W</c>
+                </r>
+                <r>
+                  <c />
+                  <c>B</c>
+                  <c>T</c>
+                </r>
+                <r>
+                  <c />
+                  <c>U</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>N</c>
+                  <c>H</c>
+                </r>
+                <r>
+                  <c />
+                  <c>F</c>
+                  <c>U</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Q</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Y</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>V</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>W</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Y</c>
+                  <c>J</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>V</c>
+                </r>
+                <r>
+                  <c />
+                  <c>N</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>U</c>
+                  <c>Q</c>
+                </r>
+                <r>
+                  <c />
+                  <c>A</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>U</c>
+                  <c>M</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Q</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>V</c>
+                </r>
+                <r>
+                  <c />
+                  <c>B</c>
+                  <c>Z</c>
+                </r>
+                <r>
+                  <c />
+                  <c>W</c>
+                  <c>Q</c>
+                </r>
+                <r>
+                  <c />
+                  <c>L</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>P</c>
+                </r>
+                <r>
+                  <c />
+                  <c>G</c>
+                  <c>P</c>
+                </r>
+                <r>
+                  <c />
+                  <c>L</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>K</c>
+                  <c>A</c>
+                </r>
+                <r>
+                  <c />
+                  <c>D</c>
+                  <c>S</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>H</c>
+                </r>
+                <r>
+                  <c />
+                  <c>R</c>
+                  <c>M</c>
+                </r>
+                <r>
+                  <c />
+                  <c>Q</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>K</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>N</c>
+                  <c>O</c>
+                </r>
+                <r>
+                  <c />
+                  <c>R</c>
+                  <c>X</c>
+                </r>
+                <r>
+                  <c />
+                  <c>P</c>
+                  <c>C</c>
+                </r>
+                <r>
+                  <c />
+                  <c>B</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>G</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>L</c>
+                  <c>V</c>
+                </r>
+                <r>
+                  <c />
+                  <c>W</c>
+                  <c>Y</c>
+                </r>
+                <r>
+                  <c />
+                  <c>C</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c />
+                  <c>M</c>
+                  <c>J</c>
+                </r>
+                <r>
+                  <c />
+                  <c>F</c>
+                  <c>N</c>
+                </r>
+                <r>
+                  <c />
+                  <c>T</c>
+                  <c>Q</c>
+                </r>
+                <r>
+                  <c />
+                  <c>I</c>
+                  <c>E</c>
+                </r>
+                <r>
+                  <c />
+                  <c>A</c>
+                  <c>D</c>
+                </r>
+                <r>
+                  <c>A</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>B</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>C</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>D</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>E</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>F</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>G</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>H</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>I</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>J</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>K</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>L</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>M</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>N</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>O</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>P</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>Q</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>R</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>S</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>T</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>U</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>V</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>W</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>X</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>Y</c>
+                  <c />
+                  <c />
+                </r>
+                <r>
+                  <c>Z</c>
+                  <c />
+                  <c />
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Text Input (29)</Name>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="198" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>IsNull([Field1])</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNull</Operator>
+            <Field>Field1</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-07 00:57:36</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2018-12-07 00:57:36</StartDate>
+              <EndDate>2018-12-07 00:57:36</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsNull([Field1])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="294" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="282" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Predecessor" selected="False" />
+            <SelectField field="Step" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="594" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] = 1</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>RecordID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-07 00:58:20</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2018-12-07 00:58:20</StartDate>
+              <EndDate>2018-12-07 00:58:20</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="702" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Field1" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="930" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1338" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Count" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Predecessor" size="1" source="TextInput:" type="String" />
+            <Field name="Step" size="1" source="TextInput:" type="String" />
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="546" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Field1" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Field1" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_RecordID" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+            <Field name="Right_Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Field1" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Field1" size="1" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Field1" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="9" Connection="Right" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="16" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="16" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="16" Connection="Left" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="27" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="True" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="False" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="39" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="39" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="True" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Left" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AdventOfCodeD7P1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author>claje</Author>
+      <Company />
+      <Copyright>2018</Copyright>
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (18)</Name>
+          <ToolId value="18" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (19)</Description>
+              <Name>Macro Output (19)</Name>
+              <ToolId value="19" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (22)</Description>
+              <Name>Macro Output (22)</Name>
+              <ToolId value="22" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (30)</Description>
+              <Name>Macro Input (30)</Name>
+              <ToolId value="30" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input30</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="1000" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="19" Selected="True" />
+        <Tool ToolId="22" Selected="True" />
+        <Tool ToolId="30" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
