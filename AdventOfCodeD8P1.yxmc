@@ -1,0 +1,1371 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.3">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1782" y="294" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>!Contains([Node],'.')</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>
+            </Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-08 10:55:22</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2018-12-08 10:55:22</StartDate>
+              <EndDate>2018-12-08 10:55:22</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>!Contains([Node],'.')</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: NODE+NewNode+IF [RecordID] IN (1,2) THEN &#xA;'.'&#xA;ELSEIF&#xA; RecordID &gt; [Max_RecordID]-[Data] THEN '#.'&#xA;ELSEIF [NumNodes]=0 THEN '.'&#xA;ELSE ';'&#xA;ENDIF" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: NODE+NewNode+IF [RecordID] IN (1,2) THEN &#xA;'.'&#xA;ELSEIF&#xA; RecordID &gt; [Max_RecordID]-[Data] THEN '#.'&#xA;ELSEIF [NumNodes]=0 THEN '.'&#xA;ELSE ';'&#xA;ENDIF" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2178" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>E:\Programdata\Alteryx\Engine\Engine_33148_e3761985bda74cc5a4080b9cd5ea1ac6_\Engine_19352_1dabbcb01a2948c08fadc25a42f93750_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="618" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="CEIL(RecordID/(Count/If NumNodes = 0 THen 1 Else NumNodes ENDIF))" field="RecordGroup" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[RecordGroup = CEIL(RecordID/(Count/If NumNodes = 0 THen 1 Else NumNodes ENDIF))
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" name="RecordID" source="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" type="Int32" />
+            <Field name="RecordGroup" source="Formula: CEIL(RecordID/(Count/If NumNodes = 0 THen 1 Else NumNodes ENDIF))" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1002" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>E:\Programdata\Alteryx\Engine\Engine_33148_e3761985bda74cc5a4080b9cd5ea1ac6_\Engine_19352_d4add6c3838b4700b08e37c39b360771_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="714" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" field="RecordGroup" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[RecordGroup = IF RecordGroup > NumNodes Then Count Else [RecordGroup] ENDIF
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" name="RecordID" source="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="906" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>RecordID</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:RecordID]+1</Expression>
+          <GroupByFields>
+            <Field field="NewNode" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:RecordID]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1794" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="NODE+NewNode+IF [RecordID] IN (1,2) THEN &#xA;'.'&#xA;ELSEIF&#xA; RecordID &gt; [Max_RecordID]-[Data] THEN '#.'&#xA;ELSEIF [NumNodes]=0 THEN '.'&#xA;ELSE ';'&#xA;ENDIF" field="Node" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Node = NODE+NewNode+IF [RecordID] IN (1,2) THEN 
+'.'
+ELSEIF
+ RecordID &gt; [Max_Rec...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: NODE+NewNode+IF [RecordID] IN (1,2) THEN &#xA;'.'&#xA;ELSEIF&#xA; RecordID &gt; [Max_RecordID]-[Data] THEN '#.'&#xA;ELSEIF [NumNodes]=0 THEN '.'&#xA;ELSE ';'&#xA;ENDIF" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1134" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_NewNode" selected="False" />
+                <SelectField field="Right_Node" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Summarize: GroupBy - NewNode" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1038" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] = 1</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>RecordID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-08 10:09:46</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>1</Operand>
+              <StartDate>2018-12-08 10:09:46</StartDate>
+              <EndDate>2018-12-08 10:09:46</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1230" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RecordID" selected="True" />
+                <SelectField field="Left_Field1" selected="True" />
+                <SelectField field="Left_RecordID_Master" selected="True" />
+                <SelectField field="Left_NewNode" selected="True" />
+                <SelectField field="Left_Node" selected="True" />
+                <SelectField field="Left_NumNodes" selected="True" />
+                <SelectField field="Left_Max_RecordID" selected="True" />
+                <SelectField field="Right_RecordID" selected="False" rename="Data" />
+                <SelectField field="Right_Field1" selected="True" rename="Data" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1326" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="NewNode" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RecordID" selected="True" />
+                <SelectField field="Left_Field1" selected="True" />
+                <SelectField field="Left_RecordID_Master" selected="True" />
+                <SelectField field="Left_NewNode" selected="True" />
+                <SelectField field="Left_Node" selected="True" />
+                <SelectField field="Left_Max_RecordID" selected="True" />
+                <SelectField field="Left_Data" selected="True" />
+                <SelectField field="Right_RecordID" selected="False" rename="NumNodes" />
+                <SelectField field="Right_Field1" selected="True" rename="NumNodes" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="NewNode" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1038" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[RecordID] = 2</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>RecordID</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2018-12-08 00:52:07</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>2</Operand>
+              <StartDate>2018-12-08 00:52:07</StartDate>
+              <EndDate>2018-12-08 00:52:07</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[RecordID] = 2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1038" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="RecordID" action="Max" rename="Max_RecordID" />
+            <SummarizeField field="NewNode" action="GroupBy" rename="NewNode" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Summarize: GroupBy - NewNode" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1494" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="NewNode" action="Max" rename="Last_NewNode" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="1638" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1890" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>E:\Programdata\Alteryx\Engine\Engine_33148_e3761985bda74cc5a4080b9cd5ea1ac6_\Engine_19352_ea5d8acf129c48a3ac3d8b2455a08148_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1002" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Max_RecordID" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="NewNode" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="78" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Input23</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">E:\Alteryx Work\AdventofCode\D8MacroTempalte.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Text Input (1)</Name>
+          <DefaultAnnotationText>D8MacroTempalte.yxdb</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1974" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Final</Name>
+          <Abbrev>O</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1902" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Iterate</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1410" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="NewNode" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="246" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Node" action="GroupBy" rename="Node" />
+            <SummarizeField field="Node" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Node" size="1073741823" source="Summarize: GroupBy - Node" type="V_WString" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="330" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Node" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Node" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Node" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Node" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="RecordID" source="RecordID: Starting Value=1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Node" size="1073741823" source="Summarize: GroupBy - Node" type="V_WString" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Node" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1878" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]" field="Iteration" size="4" type="Int32" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Iteration = [Engine.IterationNumber]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: NODE+NewNode+IF [RecordID] IN (1,2) THEN &#xA;'.'&#xA;ELSEIF&#xA; RecordID &gt; [Max_RecordID]-[Data] THEN '#.'&#xA;ELSEIF [NumNodes]=0 THEN '.'&#xA;ELSE ';'&#xA;ENDIF" type="V_WString" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="Formula: [Row-1:RecordID]+1" name="Max_RecordID" source="Formula: [Row-1:RecordID]+1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="Data" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="TextToColumns: Parsed from Field1" name="NumNodes" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="Last_NewNode" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="Int32" />
+            <Field name="Iteration" source="Formula: [Engine.IterationNumber]" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="426" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="RecordID" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="522" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Field1</UpdateField_Name>
+          <CreateField_Name>RecordID</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1
+ELSE 1
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1
+ELSE 1
+ENDIF</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field name="NewNode" size="1073741823" source="Formula: '1'" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" name="RecordID" source="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="810" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>NewNode</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF
+
+[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF
+
+[Ro...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Field1" name="Field1" source="TextToColumns: Parsed from Field1" type="Int32" />
+            <Field name="RecordID_Master" source="Formula: RecordID" type="Int32" />
+            <Field name="NumNodes" source="Formula: 1" type="Int32" />
+            <Field description="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" name="NewNode" size="1073741823" source="Formula: IF ISEMPTY([Row-1:NewNode]) THEN [Last_NewNode]+1 ELSEIF&#xA;&#xA;[Row-1:Node] = Node AND [Row-1:RecordGroup] = RecordGroup THEN [Row-1:NewNode] ELSE TONUMBER([Row-1:NewNode])+1 ENDIF" type="V_WString" />
+            <Field name="Node" size="1073741823" source="Formula: ''" type="V_WString" />
+            <Field name="Last_NewNode" source="Formula: 0" type="Int32" />
+            <Field name="Count" source="Summarize: Count - Node" type="Int64" />
+            <Field description="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" name="RecordID" source="Formula: IF Node = [Row-1:Node] THEN [Row-1:RecordID]+1&#xA;ELSE 1&#xA;ENDIF" type="Int32" />
+            <Field name="RecordGroup" source="Formula: IF RecordGroup &gt; NumNodes Then Count Else [RecordGroup] ENDIF" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Node" order="" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="True" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="False" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Join" />
+      <Destination ToolID="14" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="True" />
+      <Destination ToolID="14" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="True" />
+      <Destination ToolID="15" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Join" />
+      <Destination ToolID="15" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="19" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="12" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="12" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="28" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Join" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AdventOfCodeD8P1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (22)</Name>
+          <ToolId value="22" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description>Macro Input (23)</Description>
+              <Name>Macro Input (23)</Name>
+              <ToolId value="23" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (24)</Description>
+              <Name>Macro Output (24)</Name>
+              <ToolId value="24" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (25)</Description>
+              <Name>Macro Output (25)</Name>
+              <ToolId value="25" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>Input23</Input>
+        <Output>Iterate</Output>
+        <IterationLimit value="10000" />
+        <LimitBehavior>Warn</LimitBehavior>
+        <OutputMode>AutoByName</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="3" Selected="False" />
+        <Tool ToolId="8" Selected="False" />
+        <Tool ToolId="20" Selected="False" />
+        <Tool ToolId="23" Selected="True" />
+        <Tool ToolId="24" Selected="True" />
+        <Tool ToolId="25" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
